@@ -1,0 +1,5 @@
+<div class="main-layout">
+  <app-sidebar (addTask)="onAddTask()"></app-sidebar>
+  <router-outlet class="content-wrapper" [ngClass]="{ 'blurred': showAddTask }"></router-outlet>
+  <app-add-task class="blur-overlay" *ngIf="showAddTask" (closeAddTask)="closeAddTask()"></app-add-task>
+</div>

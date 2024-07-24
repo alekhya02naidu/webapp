@@ -1,0 +1,13 @@
+<div class="task" 
+    [ngClass]="{ 'completed': task.isCompleted }" 
+    [style.background]="getBackgroundColor()">
+    <img [src]="getImageSrc()" alt="{{ getImageAlt() }}" />
+    <span (click)="onTaskClicked()">{{ task.title }}</span>
+
+    <app-task-detail *ngIf="showTaskDetail" 
+                [task]="task" 
+                (taskDeleted)="onTaskDeleted($event)" >
+    </app-task-detail>
+
+</div>
+

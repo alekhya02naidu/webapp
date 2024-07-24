@@ -1,0 +1,352 @@
+2024-06-20 11:35:49.305 +05:30 [INF] User profile is available. Using 'C:\Users\alekhya.n\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-20 11:35:49.446 +05:30 [INF] Now listening on: http://localhost:5279
+2024-06-20 11:35:49.450 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-20 11:35:49.452 +05:30 [INF] Hosting environment: Development
+2024-06-20 11:35:49.453 +05:30 [INF] Content root path: C:\Tasks\ToDo.WebApi\ToDoApp
+2024-06-20 11:36:00.288 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/index.html - null null
+2024-06-20 11:36:00.472 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/index.html - 200 null text/html;charset=utf-8 184.2096ms
+2024-06-20 11:36:00.626 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - null null
+2024-06-20 11:36:00.919 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 292.445ms
+2024-06-20 11:36:13.171 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5279/Account/SignIn - application/json 64
+2024-06-20 11:36:13.181 +05:30 [INF] CORS policy execution successful.
+2024-06-20 11:36:13.190 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-06-20 11:36:13.285 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.AccountController.Login (ToDoApp)'
+2024-06-20 11:36:13.342 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.String]] Login(ToDoApp.DB.Models.UserDto) on controller ToDoApp.Controllers.AccountController (ToDoApp).
+2024-06-20 11:36:16.659 +05:30 [INF] Executed DbCommand (436ms) [Parameters=[@__username_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[PasswordHash], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+2024-06-20 11:36:17.870 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[@__username_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[PasswordHash], [u].[Username]
+FROM [UserDTO] AS [u]
+WHERE [u].[Username] = @__username_0
+2024-06-20 11:36:17.946 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 11:36:17.982 +05:30 [INF] Executed action ToDoApp.Controllers.AccountController.Login (ToDoApp) in 4618.7505ms
+2024-06-20 11:36:17.987 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.AccountController.Login (ToDoApp)'
+2024-06-20 11:36:18.012 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5279/Account/SignIn - 200 null application/json; charset=utf-8 4840.9986ms
+2024-06-20 11:36:45.281 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5279/Task - application/json 186
+2024-06-20 11:36:45.294 +05:30 [INF] CORS policy execution successful.
+2024-06-20 11:36:45.400 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.TaskController.CreateTask (ToDoApp)'
+2024-06-20 11:36:45.411 +05:30 [INF] Route matched with {action = "CreateTask", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Int32]] CreateTask(ToDoApp.DB.Models.TaskDto) on controller ToDoApp.Controllers.TaskController (ToDoApp).
+2024-06-20 11:36:45.843 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (Size = 8000) (DbType = AnsiString), @p2='?' (DbType = Boolean), @p3='?' (Size = 100) (DbType = AnsiString), @p4='?' (DbType = DateTime), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Tasks] ([CreatedAt], [Description], [IsCompleted], [Title], [UpdatedAt], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2024-06-20 11:36:45.905 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'ToDoApp.DB.Models.ToDoAppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Tasks_Users". The conflict occurred in database "Alekhya_ToDoApp", table "dbo.Users", column 'Id'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:33df874e-ca3d-479b-ba34-4bf3ecdf305e
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Tasks_Users". The conflict occurred in database "Alekhya_ToDoApp", table "dbo.Users", column 'Id'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:33df874e-ca3d-479b-ba34-4bf3ecdf305e
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-06-20 11:36:46.007 +05:30 [ERR] Error occurred while creating the task
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Tasks_Users". The conflict occurred in database "Alekhya_ToDoApp", table "dbo.Users", column 'Id'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:33df874e-ca3d-479b-ba34-4bf3ecdf305e
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at ToDoApp.DAL.Repository.TaskRepository.InsertTask(TaskDto taskDto) in C:\Tasks\ToDo.WebApi\ToDoApp.DAL\Repository\TaskRepository.cs:line 28
+   at ToDoApp.BAL.Service.TaskService.InsertTask(TaskDto taskDto) in C:\Tasks\ToDo.WebApi\ToDoApp.BAL\Service\TaskService.cs:line 18
+   at ToDoApp.Controllers.TaskController.CreateTask(TaskDto taskDto) in C:\Tasks\ToDo.WebApi\ToDoApp\Controllers\TaskController.cs:line 75
+2024-06-20 11:36:46.111 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 11:36:46.125 +05:30 [INF] Executed action ToDoApp.Controllers.TaskController.CreateTask (ToDoApp) in 705.0055ms
+2024-06-20 11:36:46.128 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.TaskController.CreateTask (ToDoApp)'
+2024-06-20 11:36:46.131 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5279/Task - 200 null application/json; charset=utf-8 849.8991ms
+2024-06-20 11:36:54.984 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5279/Task - application/json 186
+2024-06-20 11:36:55.022 +05:30 [INF] CORS policy execution successful.
+2024-06-20 11:36:55.048 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.TaskController.CreateTask (ToDoApp)'
+2024-06-20 11:36:55.053 +05:30 [INF] Route matched with {action = "CreateTask", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Int32]] CreateTask(ToDoApp.DB.Models.TaskDto) on controller ToDoApp.Controllers.TaskController (ToDoApp).
+2024-06-20 11:36:55.086 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (Size = 8000) (DbType = AnsiString), @p2='?' (DbType = Boolean), @p3='?' (Size = 100) (DbType = AnsiString), @p4='?' (DbType = DateTime), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Tasks] ([CreatedAt], [Description], [IsCompleted], [Title], [UpdatedAt], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2024-06-20 11:36:55.156 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 11:36:55.163 +05:30 [INF] Executed action ToDoApp.Controllers.TaskController.CreateTask (ToDoApp) in 99.2695ms
+2024-06-20 11:36:55.173 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.TaskController.CreateTask (ToDoApp)'
+2024-06-20 11:36:55.176 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5279/Task - 200 null application/json; charset=utf-8 191.7802ms
+2024-06-20 11:37:59.402 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5279/Task - application/json 232
+2024-06-20 11:37:59.412 +05:30 [INF] CORS policy execution successful.
+2024-06-20 11:37:59.419 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.TaskController.CreateTask (ToDoApp)'
+2024-06-20 11:37:59.427 +05:30 [INF] Route matched with {action = "CreateTask", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Int32]] CreateTask(ToDoApp.DB.Models.TaskDto) on controller ToDoApp.Controllers.TaskController (ToDoApp).
+2024-06-20 11:37:59.459 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (Size = 8000) (DbType = AnsiString), @p2='?' (DbType = Boolean), @p3='?' (Size = 100) (DbType = AnsiString), @p4='?' (DbType = DateTime), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Tasks] ([CreatedAt], [Description], [IsCompleted], [Title], [UpdatedAt], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2024-06-20 11:37:59.479 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 11:37:59.484 +05:30 [INF] Executed action ToDoApp.Controllers.TaskController.CreateTask (ToDoApp) in 49.9016ms
+2024-06-20 11:37:59.494 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.TaskController.CreateTask (ToDoApp)'
+2024-06-20 11:37:59.498 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5279/Task - 200 null application/json; charset=utf-8 95.9625ms
+2024-06-20 11:38:10.876 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/Task - null null
+2024-06-20 11:38:10.884 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.TaskController.GetAllTasks (ToDoApp)'
+2024-06-20 11:38:10.892 +05:30 [INF] Route matched with {action = "GetAllTasks", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Collections.Generic.IEnumerable`1[ToDoApp.DB.Models.TaskDto]]] GetAllTasks() on controller ToDoApp.Controllers.TaskController (ToDoApp).
+2024-06-20 11:38:10.935 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreatedAt], [t].[Description], [t].[Id], [t].[IsCompleted], [t].[Title], [t].[UpdatedAt], [t].[UserId]
+FROM [TaskDTO] AS [t]
+2024-06-20 11:38:10.953 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ToDoApp.DB.Models.TaskDto, ToDoApp.DB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 11:38:10.968 +05:30 [INF] Executed action ToDoApp.Controllers.TaskController.GetAllTasks (ToDoApp) in 64.5277ms
+2024-06-20 11:38:10.973 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.TaskController.GetAllTasks (ToDoApp)'
+2024-06-20 11:38:10.976 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/Task - 200 null application/json; charset=utf-8 100.2449ms
+2024-06-20 11:38:27.193 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5279/Account/SignUp - application/json 62
+2024-06-20 11:38:27.199 +05:30 [INF] CORS policy execution successful.
+2024-06-20 11:38:27.210 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.AccountController.RegisterUser (ToDoApp)'
+2024-06-20 11:38:27.231 +05:30 [INF] Route matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Int32]] RegisterUser(ToDoApp.DB.Models.UserDto) on controller ToDoApp.Controllers.AccountController (ToDoApp).
+2024-06-20 11:38:27.769 +05:30 [INF] Executed DbCommand (22ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([PasswordHash], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2024-06-20 11:38:27.817 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 11:38:27.961 +05:30 [INF] Executed action ToDoApp.Controllers.AccountController.RegisterUser (ToDoApp) in 718.8765ms
+2024-06-20 11:38:28.001 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.AccountController.RegisterUser (ToDoApp)'
+2024-06-20 11:38:28.007 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5279/Account/SignUp - 200 null application/json; charset=utf-8 812.9527ms
+2024-06-20 11:38:39.329 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5279/Account/SignIn - application/json 62
+2024-06-20 11:38:39.336 +05:30 [INF] CORS policy execution successful.
+2024-06-20 11:38:39.376 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.AccountController.Login (ToDoApp)'
+2024-06-20 11:38:39.380 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.String]] Login(ToDoApp.DB.Models.UserDto) on controller ToDoApp.Controllers.AccountController (ToDoApp).
+2024-06-20 11:38:39.414 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__username_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[PasswordHash], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+2024-06-20 11:38:39.802 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[@__username_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[PasswordHash], [u].[Username]
+FROM [UserDTO] AS [u]
+WHERE [u].[Username] = @__username_0
+2024-06-20 11:38:39.811 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 11:38:39.820 +05:30 [INF] Executed action ToDoApp.Controllers.AccountController.Login (ToDoApp) in 424.7353ms
+2024-06-20 11:38:39.824 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.AccountController.Login (ToDoApp)'
+2024-06-20 11:38:39.829 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5279/Account/SignIn - 200 null application/json; charset=utf-8 500.1281ms
+2024-06-20 11:38:50.710 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5279/Task - application/json 232
+2024-06-20 11:38:50.714 +05:30 [INF] CORS policy execution successful.
+2024-06-20 11:38:50.716 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.TaskController.CreateTask (ToDoApp)'
+2024-06-20 11:38:50.720 +05:30 [INF] Route matched with {action = "CreateTask", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Int32]] CreateTask(ToDoApp.DB.Models.TaskDto) on controller ToDoApp.Controllers.TaskController (ToDoApp).
+2024-06-20 11:38:50.747 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (Size = 8000) (DbType = AnsiString), @p2='?' (DbType = Boolean), @p3='?' (Size = 100) (DbType = AnsiString), @p4='?' (DbType = DateTime), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Tasks] ([CreatedAt], [Description], [IsCompleted], [Title], [UpdatedAt], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2024-06-20 11:38:50.758 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 11:38:50.766 +05:30 [INF] Executed action ToDoApp.Controllers.TaskController.CreateTask (ToDoApp) in 32.5425ms
+2024-06-20 11:38:50.777 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.TaskController.CreateTask (ToDoApp)'
+2024-06-20 11:38:50.782 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5279/Task - 200 null application/json; charset=utf-8 71.6292ms
+2024-06-20 11:39:04.538 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5279/Task - application/json 232
+2024-06-20 11:39:04.544 +05:30 [INF] CORS policy execution successful.
+2024-06-20 11:39:04.548 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.TaskController.CreateTask (ToDoApp)'
+2024-06-20 11:39:04.555 +05:30 [INF] Route matched with {action = "CreateTask", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Int32]] CreateTask(ToDoApp.DB.Models.TaskDto) on controller ToDoApp.Controllers.TaskController (ToDoApp).
+2024-06-20 11:39:04.587 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (Size = 8000) (DbType = AnsiString), @p2='?' (DbType = Boolean), @p3='?' (Size = 100) (DbType = AnsiString), @p4='?' (DbType = DateTime), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Tasks] ([CreatedAt], [Description], [IsCompleted], [Title], [UpdatedAt], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2024-06-20 11:39:04.604 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 11:39:04.612 +05:30 [INF] Executed action ToDoApp.Controllers.TaskController.CreateTask (ToDoApp) in 51.5578ms
+2024-06-20 11:39:04.621 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.TaskController.CreateTask (ToDoApp)'
+2024-06-20 11:39:04.626 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5279/Task - 200 null application/json; charset=utf-8 88.6002ms
+2024-06-20 11:39:16.983 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/Task - null null
+2024-06-20 11:39:16.987 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.TaskController.GetAllTasks (ToDoApp)'
+2024-06-20 11:39:16.989 +05:30 [INF] Route matched with {action = "GetAllTasks", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Collections.Generic.IEnumerable`1[ToDoApp.DB.Models.TaskDto]]] GetAllTasks() on controller ToDoApp.Controllers.TaskController (ToDoApp).
+2024-06-20 11:39:17.008 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreatedAt], [t].[Description], [t].[Id], [t].[IsCompleted], [t].[Title], [t].[UpdatedAt], [t].[UserId]
+FROM [TaskDTO] AS [t]
+2024-06-20 11:39:17.021 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ToDoApp.DB.Models.TaskDto, ToDoApp.DB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 11:39:17.030 +05:30 [INF] Executed action ToDoApp.Controllers.TaskController.GetAllTasks (ToDoApp) in 30.5769ms
+2024-06-20 11:39:17.034 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.TaskController.GetAllTasks (ToDoApp)'
+2024-06-20 11:39:17.041 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/Task - 200 null application/json; charset=utf-8 58.5958ms
+2024-06-20 11:48:46.333 +05:30 [INF] Application is shutting down...
+2024-06-20 11:49:47.139 +05:30 [INF] User profile is available. Using 'C:\Users\alekhya.n\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-20 11:49:47.296 +05:30 [INF] Now listening on: http://localhost:5279
+2024-06-20 11:49:47.299 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-20 11:49:47.299 +05:30 [INF] Hosting environment: Development
+2024-06-20 11:49:47.300 +05:30 [INF] Content root path: C:\Tasks\ToDo.WebApi\ToDoApp
+2024-06-20 11:49:47.725 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/index.html - null null
+2024-06-20 11:49:48.086 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/index.html - 200 null text/html;charset=utf-8 362.7187ms
+2024-06-20 11:49:48.154 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-20 11:49:48.157 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 2.8981ms
+2024-06-20 11:49:48.277 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - null null
+2024-06-20 11:49:48.612 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 335.2718ms
+2024-06-20 11:50:36.244 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/index.html - null null
+2024-06-20 11:50:36.266 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/index.html - 200 null text/html;charset=utf-8 21.6081ms
+2024-06-20 11:50:36.294 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-20 11:50:36.297 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 2.9858ms
+2024-06-20 11:50:36.360 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - null null
+2024-06-20 11:50:36.381 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 21.3354ms
+2024-06-20 11:50:43.372 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask?userId=3 - null null
+2024-06-20 11:50:43.376 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-06-20 11:50:43.477 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-06-20 11:50:43.484 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-20 11:50:43.485 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask?userId=3 - 401 0 null 112.9131ms
+2024-06-20 11:51:00.490 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5279/Account/SignIn - application/json 64
+2024-06-20 11:51:00.493 +05:30 [INF] CORS policy execution successful.
+2024-06-20 11:51:00.524 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.AccountController.Login (ToDoApp)'
+2024-06-20 11:51:00.561 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.String]] Login(ToDoApp.DB.Models.UserDto) on controller ToDoApp.Controllers.AccountController (ToDoApp).
+2024-06-20 11:51:03.366 +05:30 [INF] Executed DbCommand (86ms) [Parameters=[@__username_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[PasswordHash], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+2024-06-20 11:51:04.483 +05:30 [INF] Executed DbCommand (62ms) [Parameters=[@__username_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[PasswordHash], [u].[Username]
+FROM [UserDTO] AS [u]
+WHERE [u].[Username] = @__username_0
+2024-06-20 11:51:04.598 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 11:51:04.648 +05:30 [INF] Executed action ToDoApp.Controllers.AccountController.Login (ToDoApp) in 4079.6547ms
+2024-06-20 11:51:04.653 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.AccountController.Login (ToDoApp)'
+2024-06-20 11:51:04.671 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5279/Account/SignIn - 200 null application/json; charset=utf-8 4180.4304ms
+2024-06-20 11:51:19.071 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask?userId=3 - null null
+2024-06-20 11:51:19.145 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp)'
+2024-06-20 11:51:19.156 +05:30 [INF] Route matched with {action = "GetTasksByUserId", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Collections.Generic.IEnumerable`1[ToDoApp.DB.Models.TaskDto]]] GetTasksByUserIdAsync(Int32) on controller ToDoApp.Controllers.TaskController (ToDoApp).
+2024-06-20 11:51:19.562 +05:30 [INF] Executed DbCommand (250ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreatedAt], [t].[Description], [t].[Id], [t].[IsCompleted], [t].[Title], [t].[UpdatedAt], [t].[UserId]
+FROM [TaskDTO] AS [t]
+WHERE [t].[UserId] = @__userId_0
+2024-06-20 11:51:19.593 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ToDoApp.DB.Models.TaskDto, ToDoApp.DB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 11:51:19.643 +05:30 [INF] Executed action ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp) in 487.0309ms
+2024-06-20 11:51:19.646 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp)'
+2024-06-20 11:51:19.653 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask?userId=3 - 200 null application/json; charset=utf-8 581.4268ms
+2024-06-20 11:51:42.418 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5279/Account/SignIn - application/json 62
+2024-06-20 11:51:42.419 +05:30 [INF] CORS policy execution successful.
+2024-06-20 11:51:42.421 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.AccountController.Login (ToDoApp)'
+2024-06-20 11:51:42.422 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.String]] Login(ToDoApp.DB.Models.UserDto) on controller ToDoApp.Controllers.AccountController (ToDoApp).
+2024-06-20 11:51:42.499 +05:30 [INF] Executed DbCommand (64ms) [Parameters=[@__username_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[PasswordHash], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+2024-06-20 11:51:43.220 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[@__username_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[PasswordHash], [u].[Username]
+FROM [UserDTO] AS [u]
+WHERE [u].[Username] = @__username_0
+2024-06-20 11:51:43.223 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 11:51:43.224 +05:30 [INF] Executed action ToDoApp.Controllers.AccountController.Login (ToDoApp) in 801.5805ms
+2024-06-20 11:51:43.224 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.AccountController.Login (ToDoApp)'
+2024-06-20 11:51:43.225 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5279/Account/SignIn - 200 null application/json; charset=utf-8 807.3224ms
+2024-06-20 11:51:58.759 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask?userId=3 - null null
+2024-06-20 11:51:58.762 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp)'
+2024-06-20 11:51:58.763 +05:30 [INF] Route matched with {action = "GetTasksByUserId", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Collections.Generic.IEnumerable`1[ToDoApp.DB.Models.TaskDto]]] GetTasksByUserIdAsync(Int32) on controller ToDoApp.Controllers.TaskController (ToDoApp).
+2024-06-20 11:51:58.779 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreatedAt], [t].[Description], [t].[Id], [t].[IsCompleted], [t].[Title], [t].[UpdatedAt], [t].[UserId]
+FROM [TaskDTO] AS [t]
+WHERE [t].[UserId] = @__userId_0
+2024-06-20 11:51:58.784 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ToDoApp.DB.Models.TaskDto, ToDoApp.DB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 11:51:58.785 +05:30 [INF] Executed action ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp) in 21.7561ms
+2024-06-20 11:51:58.786 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp)'
+2024-06-20 11:51:58.787 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask?userId=3 - 200 null application/json; charset=utf-8 27.2592ms
+2024-06-20 11:52:02.333 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask?userId=3 - null null
+2024-06-20 11:52:02.334 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp)'
+2024-06-20 11:52:02.335 +05:30 [INF] Route matched with {action = "GetTasksByUserId", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Collections.Generic.IEnumerable`1[ToDoApp.DB.Models.TaskDto]]] GetTasksByUserIdAsync(Int32) on controller ToDoApp.Controllers.TaskController (ToDoApp).
+2024-06-20 11:52:02.391 +05:30 [INF] Executed DbCommand (52ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreatedAt], [t].[Description], [t].[Id], [t].[IsCompleted], [t].[Title], [t].[UpdatedAt], [t].[UserId]
+FROM [TaskDTO] AS [t]
+WHERE [t].[UserId] = @__userId_0
+2024-06-20 11:52:02.393 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ToDoApp.DB.Models.TaskDto, ToDoApp.DB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 11:52:02.394 +05:30 [INF] Executed action ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp) in 58.2722ms
+2024-06-20 11:52:02.394 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp)'
+2024-06-20 11:52:02.395 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask?userId=3 - 200 null application/json; charset=utf-8 61.8777ms
+2024-06-20 11:52:49.372 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask?userId=4 - null null
+2024-06-20 11:52:49.374 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp)'
+2024-06-20 11:52:49.375 +05:30 [INF] Route matched with {action = "GetTasksByUserId", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Collections.Generic.IEnumerable`1[ToDoApp.DB.Models.TaskDto]]] GetTasksByUserIdAsync(Int32) on controller ToDoApp.Controllers.TaskController (ToDoApp).
+2024-06-20 11:52:49.388 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreatedAt], [t].[Description], [t].[Id], [t].[IsCompleted], [t].[Title], [t].[UpdatedAt], [t].[UserId]
+FROM [TaskDTO] AS [t]
+WHERE [t].[UserId] = @__userId_0
+2024-06-20 11:52:49.391 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ToDoApp.DB.Models.TaskDto, ToDoApp.DB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 11:52:49.394 +05:30 [INF] Executed action ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp) in 19.2752ms
+2024-06-20 11:52:49.395 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp)'
+2024-06-20 11:52:49.397 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask?userId=4 - 200 null application/json; charset=utf-8 24.4538ms
+2024-06-20 11:52:54.609 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask?userId=3 - null null
+2024-06-20 11:52:54.610 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp)'
+2024-06-20 11:52:54.611 +05:30 [INF] Route matched with {action = "GetTasksByUserId", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Collections.Generic.IEnumerable`1[ToDoApp.DB.Models.TaskDto]]] GetTasksByUserIdAsync(Int32) on controller ToDoApp.Controllers.TaskController (ToDoApp).
+2024-06-20 11:52:54.633 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreatedAt], [t].[Description], [t].[Id], [t].[IsCompleted], [t].[Title], [t].[UpdatedAt], [t].[UserId]
+FROM [TaskDTO] AS [t]
+WHERE [t].[UserId] = @__userId_0
+2024-06-20 11:52:54.634 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ToDoApp.DB.Models.TaskDto, ToDoApp.DB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 11:52:54.641 +05:30 [INF] Executed action ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp) in 29.373ms
+2024-06-20 11:52:54.643 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp)'
+2024-06-20 11:52:54.643 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask?userId=3 - 200 null application/json; charset=utf-8 34.0458ms
+2024-06-20 11:56:28.796 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5279/.well-known/openid-configuration - null null
+2024-06-20 11:56:28.797 +05:30 [INF] CORS policy execution successful.
+2024-06-20 11:56:28.802 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5279/.well-known/openid-configuration - 204 null null 5.4053ms
+2024-06-20 11:56:28.808 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/.well-known/openid-configuration - null null
+2024-06-20 11:56:28.809 +05:30 [INF] CORS policy execution successful.
+2024-06-20 11:56:28.813 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/.well-known/openid-configuration - 404 0 null 5.5374ms
+2024-06-20 11:56:28.815 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5279/.well-known/openid-configuration, Response status code: 404
+2024-06-20 12:02:44.807 +05:30 [INF] Application is shutting down...

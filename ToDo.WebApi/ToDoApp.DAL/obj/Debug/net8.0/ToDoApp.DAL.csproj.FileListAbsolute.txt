@@ -1,0 +1,15 @@
+C:\Tasks\ToDo.WebApi\ToDoApp.DAL\bin\Debug\net8.0\ToDoApp.DAL.deps.json
+C:\Tasks\ToDo.WebApi\ToDoApp.DAL\bin\Debug\net8.0\ToDoApp.DAL.dll
+C:\Tasks\ToDo.WebApi\ToDoApp.DAL\bin\Debug\net8.0\ToDoApp.DAL.pdb
+C:\Tasks\ToDo.WebApi\ToDoApp.DAL\bin\Debug\net8.0\ToDoApp.DB.dll
+C:\Tasks\ToDo.WebApi\ToDoApp.DAL\bin\Debug\net8.0\ToDoApp.DB.pdb
+C:\Tasks\ToDo.WebApi\ToDoApp.DAL\obj\Debug\net8.0\ToDoApp.DAL.csproj.AssemblyReference.cache
+C:\Tasks\ToDo.WebApi\ToDoApp.DAL\obj\Debug\net8.0\ToDoApp.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Tasks\ToDo.WebApi\ToDoApp.DAL\obj\Debug\net8.0\ToDoApp.DAL.AssemblyInfoInputs.cache
+C:\Tasks\ToDo.WebApi\ToDoApp.DAL\obj\Debug\net8.0\ToDoApp.DAL.AssemblyInfo.cs
+C:\Tasks\ToDo.WebApi\ToDoApp.DAL\obj\Debug\net8.0\ToDoApp.DAL.csproj.CoreCompileInputs.cache
+C:\Tasks\ToDo.WebApi\ToDoApp.DAL\obj\Debug\net8.0\ToDoApp..D1AD3D18.Up2Date
+C:\Tasks\ToDo.WebApi\ToDoApp.DAL\obj\Debug\net8.0\ToDoApp.DAL.dll
+C:\Tasks\ToDo.WebApi\ToDoApp.DAL\obj\Debug\net8.0\refint\ToDoApp.DAL.dll
+C:\Tasks\ToDo.WebApi\ToDoApp.DAL\obj\Debug\net8.0\ToDoApp.DAL.pdb
+C:\Tasks\ToDo.WebApi\ToDoApp.DAL\obj\Debug\net8.0\ref\ToDoApp.DAL.dll

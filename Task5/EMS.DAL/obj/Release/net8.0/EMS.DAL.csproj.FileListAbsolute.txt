@@ -1,0 +1,15 @@
+C:\Tasks\Task5\EMS.DAL\bin\Release\net8.0\EMS.DAL.deps.json
+C:\Tasks\Task5\EMS.DAL\bin\Release\net8.0\EMS.DAL.dll
+C:\Tasks\Task5\EMS.DAL\bin\Release\net8.0\EMS.DAL.pdb
+C:\Tasks\Task5\EMS.DAL\bin\Release\net8.0\EMS.Common.dll
+C:\Tasks\Task5\EMS.DAL\bin\Release\net8.0\EMS.Common.pdb
+C:\Tasks\Task5\EMS.DAL\obj\Release\net8.0\EMS.DAL.csproj.AssemblyReference.cache
+C:\Tasks\Task5\EMS.DAL\obj\Release\net8.0\EMS.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Tasks\Task5\EMS.DAL\obj\Release\net8.0\EMS.DAL.AssemblyInfoInputs.cache
+C:\Tasks\Task5\EMS.DAL\obj\Release\net8.0\EMS.DAL.AssemblyInfo.cs
+C:\Tasks\Task5\EMS.DAL\obj\Release\net8.0\EMS.DAL.csproj.CoreCompileInputs.cache
+C:\Tasks\Task5\EMS.DAL\obj\Release\net8.0\EMS.DAL.csproj.Up2Date
+C:\Tasks\Task5\EMS.DAL\obj\Release\net8.0\EMS.DAL.dll
+C:\Tasks\Task5\EMS.DAL\obj\Release\net8.0\refint\EMS.DAL.dll
+C:\Tasks\Task5\EMS.DAL\obj\Release\net8.0\EMS.DAL.pdb
+C:\Tasks\Task5\EMS.DAL\obj\Release\net8.0\ref\EMS.DAL.dll

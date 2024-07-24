@@ -1,0 +1,22 @@
+<div class="navigated-section">
+    <app-header [headerTitle]="currentView" (addTask)="onAddTask()"></app-header>
+
+    <app-add-task class="blur-overlay" *ngIf="showAddTask" (closeAddTask)="closeAddTask()"></app-add-task>
+    <!-- Mobile view -->
+    <app-dropdown [navOptions]="navOptions" [currentPage]="currentView" (viewChanged)="switchView($event)"></app-dropdown>
+
+    <div class="tasks-content">
+        <div class="date-heading">
+            <h2>{{ currentView === 'Active' ? 'Today’s Active Tasks' : 'Today’s Completed Tasks' }}</h2>
+            <h4>{{ currentDate }}</h4>
+        </div>
+        <div class="tasks-info">
+            <ng-container *ngIf="tasks.length > 0; else noTasks">
+                <app-task *ngFor="let task of tasks" [task]="task" (taskClicked)="onTaskClicked($event)"></app-task>
+            </ng-container>
+            <ng-template #noTasks>
+                <p>No {{ currentView.toLowerCase() }} tasks for today.</p>
+            </ng-template>
+        </div>
+    </div>
+</div>

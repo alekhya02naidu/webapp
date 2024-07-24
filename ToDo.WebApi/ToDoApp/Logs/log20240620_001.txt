@@ -1,0 +1,232 @@
+2024-06-20 10:44:16.506 +05:30 [INF] User profile is available. Using 'C:\Users\alekhya.n\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-20 10:44:16.666 +05:30 [INF] Now listening on: http://localhost:5279
+2024-06-20 10:44:16.671 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-20 10:44:16.673 +05:30 [INF] Hosting environment: Development
+2024-06-20 10:44:16.675 +05:30 [INF] Content root path: C:\Tasks\ToDo.WebApi\ToDoApp
+2024-06-20 10:44:22.404 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/ - null null
+2024-06-20 10:44:22.451 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-06-20 10:44:22.581 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/ - 404 0 null 177.7958ms
+2024-06-20 10:44:22.615 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5279/, Response status code: 404
+2024-06-20 10:44:26.462 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/index.html - null null
+2024-06-20 10:44:26.548 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/index.html - 200 null text/html;charset=utf-8 85.9949ms
+2024-06-20 10:44:26.829 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - null null
+2024-06-20 10:44:26.971 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 141.9939ms
+2024-06-20 10:44:45.872 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/index.html - null null
+2024-06-20 10:44:45.891 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/index.html - 200 null text/html;charset=utf-8 15.8627ms
+2024-06-20 10:44:46.008 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - null null
+2024-06-20 10:44:46.026 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.9937ms
+2024-06-20 10:45:15.416 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/Task - null null
+2024-06-20 10:45:15.435 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-06-20 10:45:15.442 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-20 10:45:15.448 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/Task - 401 0 null 32.0248ms
+2024-06-20 10:45:41.985 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5279/Account/SignIn - application/json 64
+2024-06-20 10:45:42.006 +05:30 [INF] CORS policy execution successful.
+2024-06-20 10:45:42.012 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.AccountController.Login (ToDoApp)'
+2024-06-20 10:45:42.043 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.String]] Login(ToDoApp.DB.Models.UserDto) on controller ToDoApp.Controllers.AccountController (ToDoApp).
+2024-06-20 10:45:43.526 +05:30 [INF] Executed DbCommand (39ms) [Parameters=[@__username_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[PasswordHash], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+2024-06-20 10:45:44.005 +05:30 [ERR] Invalid Username or password
+2024-06-20 10:45:44.011 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 10:45:44.037 +05:30 [INF] Executed action ToDoApp.Controllers.AccountController.Login (ToDoApp) in 1983.3187ms
+2024-06-20 10:45:44.041 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.AccountController.Login (ToDoApp)'
+2024-06-20 10:45:44.067 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5279/Account/SignIn - 200 null application/json; charset=utf-8 2082.3247ms
+2024-06-20 11:01:25.733 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/index.html - null null
+2024-06-20 11:01:25.743 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/index.html - 200 null text/html;charset=utf-8 10.0738ms
+2024-06-20 11:01:26.192 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - null null
+2024-06-20 11:01:26.379 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 187.0033ms
+2024-06-20 11:01:35.297 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/Task - null null
+2024-06-20 11:01:35.307 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-06-20 11:01:35.321 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-20 11:01:35.323 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/Task - 401 0 null 25.6766ms
+2024-06-20 11:13:49.370 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/User/User - null null
+2024-06-20 11:13:49.376 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.UserController.GetAllUsers (ToDoApp)'
+2024-06-20 11:13:49.390 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Collections.Generic.IEnumerable`1[ToDoApp.DB.Models.UserDto]]] GetAllUsers() on controller ToDoApp.Controllers.UserController (ToDoApp).
+2024-06-20 11:13:49.658 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[PasswordHash], [u].[Username]
+FROM [UserDTO] AS [u]
+2024-06-20 11:13:49.664 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ToDoApp.DB.Models.UserDto, ToDoApp.DB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 11:13:49.671 +05:30 [INF] Executed action ToDoApp.Controllers.UserController.GetAllUsers (ToDoApp) in 275.8513ms
+2024-06-20 11:13:49.674 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.UserController.GetAllUsers (ToDoApp)'
+2024-06-20 11:13:49.676 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/User/User - 200 null application/json; charset=utf-8 306.4793ms
+2024-06-20 11:14:02.882 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5279/Account/SignIn - application/json 64
+2024-06-20 11:14:02.888 +05:30 [INF] CORS policy execution successful.
+2024-06-20 11:14:02.893 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.AccountController.Login (ToDoApp)'
+2024-06-20 11:14:02.901 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.String]] Login(ToDoApp.DB.Models.UserDto) on controller ToDoApp.Controllers.AccountController (ToDoApp).
+2024-06-20 11:14:02.985 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__username_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[PasswordHash], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+2024-06-20 11:14:03.244 +05:30 [ERR] Invalid Username or password
+2024-06-20 11:14:03.246 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 11:14:03.250 +05:30 [INF] Executed action ToDoApp.Controllers.AccountController.Login (ToDoApp) in 342.9798ms
+2024-06-20 11:14:03.253 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.AccountController.Login (ToDoApp)'
+2024-06-20 11:14:03.255 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5279/Account/SignIn - 200 null application/json; charset=utf-8 372.5628ms
+2024-06-20 11:14:33.349 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5279/Account/SignIn - application/json 64
+2024-06-20 11:14:33.354 +05:30 [INF] CORS policy execution successful.
+2024-06-20 11:14:33.356 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.AccountController.Login (ToDoApp)'
+2024-06-20 11:14:33.357 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.String]] Login(ToDoApp.DB.Models.UserDto) on controller ToDoApp.Controllers.AccountController (ToDoApp).
+2024-06-20 11:14:33.378 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__username_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[PasswordHash], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+2024-06-20 11:14:33.570 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[@__username_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[PasswordHash], [u].[Username]
+FROM [UserDTO] AS [u]
+WHERE [u].[Username] = @__username_0
+2024-06-20 11:14:33.593 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 11:14:33.596 +05:30 [INF] Executed action ToDoApp.Controllers.AccountController.Login (ToDoApp) in 230.1364ms
+2024-06-20 11:14:33.599 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.AccountController.Login (ToDoApp)'
+2024-06-20 11:14:33.602 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5279/Account/SignIn - 200 null application/json; charset=utf-8 253.086ms
+2024-06-20 11:14:49.458 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/Task - null null
+2024-06-20 11:14:49.498 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.TaskController.GetAllTasks (ToDoApp)'
+2024-06-20 11:14:49.506 +05:30 [INF] Route matched with {action = "GetAllTasks", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Collections.Generic.IEnumerable`1[ToDoApp.DB.Models.TaskDto]]] GetAllTasks() on controller ToDoApp.Controllers.TaskController (ToDoApp).
+2024-06-20 11:14:49.534 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreatedAt], [t].[Description], [t].[Id], [t].[IsCompleted], [t].[Title], [t].[UpdatedAt], [t].[UserId], [t].[UserUsername]
+FROM [TaskDTO] AS [t]
+2024-06-20 11:14:49.540 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ToDoApp.DB.Models.TaskDto, ToDoApp.DB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 11:14:49.554 +05:30 [INF] Executed action ToDoApp.Controllers.TaskController.GetAllTasks (ToDoApp) in 44.2794ms
+2024-06-20 11:14:49.557 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.TaskController.GetAllTasks (ToDoApp)'
+2024-06-20 11:14:49.559 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/Task - 200 null application/json; charset=utf-8 100.4404ms
+2024-06-20 11:15:39.581 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5279/Task - application/json 239
+2024-06-20 11:15:39.585 +05:30 [INF] CORS policy execution successful.
+2024-06-20 11:15:39.588 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.TaskController.CreateTask (ToDoApp)'
+2024-06-20 11:15:39.605 +05:30 [INF] Route matched with {action = "CreateTask", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Int32]] CreateTask(ToDoApp.DB.Models.TaskDto) on controller ToDoApp.Controllers.TaskController (ToDoApp).
+2024-06-20 11:15:39.625 +05:30 [ERR] Error occurred while creating the task
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ToDoApp.DAL.Repository.TaskRepository.InsertTask(TaskDto taskDto) in C:\Tasks\ToDo.WebApi\ToDoApp.DAL\Repository\TaskRepository.cs:line 20
+   at ToDoApp.BAL.Service.TaskService.InsertTask(TaskDto taskDto) in C:\Tasks\ToDo.WebApi\ToDoApp.BAL\Service\TaskService.cs:line 18
+   at ToDoApp.Controllers.TaskController.CreateTask(TaskDto taskDto) in C:\Tasks\ToDo.WebApi\ToDoApp\Controllers\TaskController.cs:line 75
+2024-06-20 11:15:39.646 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 11:15:39.653 +05:30 [INF] Executed action ToDoApp.Controllers.TaskController.CreateTask (ToDoApp) in 43.0651ms
+2024-06-20 11:15:39.656 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.TaskController.CreateTask (ToDoApp)'
+2024-06-20 11:15:39.658 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5279/Task - 200 null application/json; charset=utf-8 76.9036ms
+2024-06-20 11:15:52.846 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5279/Task - application/json 239
+2024-06-20 11:15:52.849 +05:30 [INF] CORS policy execution successful.
+2024-06-20 11:15:52.851 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.TaskController.CreateTask (ToDoApp)'
+2024-06-20 11:15:52.856 +05:30 [INF] Route matched with {action = "CreateTask", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Int32]] CreateTask(ToDoApp.DB.Models.TaskDto) on controller ToDoApp.Controllers.TaskController (ToDoApp).
+2024-06-20 11:15:52.873 +05:30 [ERR] Error occurred while creating the task
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ToDoApp.DAL.Repository.TaskRepository.InsertTask(TaskDto taskDto) in C:\Tasks\ToDo.WebApi\ToDoApp.DAL\Repository\TaskRepository.cs:line 20
+   at ToDoApp.BAL.Service.TaskService.InsertTask(TaskDto taskDto) in C:\Tasks\ToDo.WebApi\ToDoApp.BAL\Service\TaskService.cs:line 18
+   at ToDoApp.Controllers.TaskController.CreateTask(TaskDto taskDto) in C:\Tasks\ToDo.WebApi\ToDoApp\Controllers\TaskController.cs:line 75
+2024-06-20 11:15:52.880 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 11:15:52.886 +05:30 [INF] Executed action ToDoApp.Controllers.TaskController.CreateTask (ToDoApp) in 14.0207ms
+2024-06-20 11:15:52.892 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.TaskController.CreateTask (ToDoApp)'
+2024-06-20 11:15:52.894 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5279/Task - 200 null application/json; charset=utf-8 48.1122ms
+2024-06-20 11:16:01.226 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5279/Task - application/json 239
+2024-06-20 11:16:01.231 +05:30 [INF] CORS policy execution successful.
+2024-06-20 11:16:01.239 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.TaskController.CreateTask (ToDoApp)'
+2024-06-20 11:16:01.258 +05:30 [INF] Route matched with {action = "CreateTask", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Int32]] CreateTask(ToDoApp.DB.Models.TaskDto) on controller ToDoApp.Controllers.TaskController (ToDoApp).
+2024-06-20 11:16:01.264 +05:30 [ERR] Error occurred while creating the task
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ToDoApp.DAL.Repository.TaskRepository.InsertTask(TaskDto taskDto) in C:\Tasks\ToDo.WebApi\ToDoApp.DAL\Repository\TaskRepository.cs:line 20
+   at ToDoApp.BAL.Service.TaskService.InsertTask(TaskDto taskDto) in C:\Tasks\ToDo.WebApi\ToDoApp.BAL\Service\TaskService.cs:line 18
+   at ToDoApp.Controllers.TaskController.CreateTask(TaskDto taskDto) in C:\Tasks\ToDo.WebApi\ToDoApp\Controllers\TaskController.cs:line 75
+2024-06-20 11:16:01.277 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 11:16:01.281 +05:30 [INF] Executed action ToDoApp.Controllers.TaskController.CreateTask (ToDoApp) in 17.8264ms
+2024-06-20 11:16:01.287 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.TaskController.CreateTask (ToDoApp)'
+2024-06-20 11:16:01.291 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5279/Task - 200 null application/json; charset=utf-8 65.6895ms
+2024-06-20 11:18:51.849 +05:30 [INF] Application is shutting down...
+2024-06-20 11:19:47.681 +05:30 [INF] User profile is available. Using 'C:\Users\alekhya.n\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-20 11:19:47.864 +05:30 [INF] Now listening on: http://localhost:5279
+2024-06-20 11:19:47.867 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-20 11:19:47.867 +05:30 [INF] Hosting environment: Development
+2024-06-20 11:19:47.868 +05:30 [INF] Content root path: C:\Tasks\ToDo.WebApi\ToDoApp
+2024-06-20 11:19:48.276 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/index.html - null null
+2024-06-20 11:19:48.744 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/index.html - 200 null text/html;charset=utf-8 476.32ms
+2024-06-20 11:19:48.760 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-20 11:19:48.763 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 2.798ms
+2024-06-20 11:19:49.184 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - null null
+2024-06-20 11:19:49.556 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 371.9936ms
+2024-06-20 11:20:02.608 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5279/Account/SignIn - application/json 64
+2024-06-20 11:20:02.614 +05:30 [INF] CORS policy execution successful.
+2024-06-20 11:20:02.617 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-06-20 11:20:02.678 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.AccountController.Login (ToDoApp)'
+2024-06-20 11:20:02.695 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.String]] Login(ToDoApp.DB.Models.UserDto) on controller ToDoApp.Controllers.AccountController (ToDoApp).
+2024-06-20 11:20:03.814 +05:30 [INF] Executed DbCommand (49ms) [Parameters=[@__username_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[PasswordHash], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+2024-06-20 11:20:04.444 +05:30 [INF] Executed DbCommand (192ms) [Parameters=[@__username_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[PasswordHash], [u].[Username]
+FROM [UserDTO] AS [u]
+WHERE [u].[Username] = @__username_0
+2024-06-20 11:20:04.484 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 11:20:04.501 +05:30 [INF] Executed action ToDoApp.Controllers.AccountController.Login (ToDoApp) in 1803.6559ms
+2024-06-20 11:20:04.505 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.AccountController.Login (ToDoApp)'
+2024-06-20 11:20:04.516 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5279/Account/SignIn - 200 null application/json; charset=utf-8 1907.5081ms
+2024-06-20 11:20:44.851 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5279/Task - application/json 224
+2024-06-20 11:20:44.852 +05:30 [INF] CORS policy execution successful.
+2024-06-20 11:20:44.940 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.TaskController.CreateTask (ToDoApp)'
+2024-06-20 11:20:44.946 +05:30 [INF] Route matched with {action = "CreateTask", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Int32]] CreateTask(ToDoApp.DB.Models.TaskDto) on controller ToDoApp.Controllers.TaskController (ToDoApp).
+2024-06-20 11:20:44.994 +05:30 [ERR] Error occurred while creating the task
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ToDoApp.DAL.Repository.TaskRepository.InsertTask(TaskDto taskDto) in C:\Tasks\ToDo.WebApi\ToDoApp.DAL\Repository\TaskRepository.cs:line 20
+   at ToDoApp.BAL.Service.TaskService.InsertTask(TaskDto taskDto) in C:\Tasks\ToDo.WebApi\ToDoApp.BAL\Service\TaskService.cs:line 18
+   at ToDoApp.Controllers.TaskController.CreateTask(TaskDto taskDto) in C:\Tasks\ToDo.WebApi\ToDoApp\Controllers\TaskController.cs:line 75
+2024-06-20 11:20:45.013 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 11:20:45.015 +05:30 [INF] Executed action ToDoApp.Controllers.TaskController.CreateTask (ToDoApp) in 68.4888ms
+2024-06-20 11:20:45.015 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.TaskController.CreateTask (ToDoApp)'
+2024-06-20 11:20:45.016 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5279/Task - 200 null application/json; charset=utf-8 166.0094ms
+2024-06-20 11:20:52.296 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5279/Task - application/json 224
+2024-06-20 11:20:52.298 +05:30 [INF] CORS policy execution successful.
+2024-06-20 11:20:52.306 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.TaskController.CreateTask (ToDoApp)'
+2024-06-20 11:20:52.307 +05:30 [INF] Route matched with {action = "CreateTask", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Int32]] CreateTask(ToDoApp.DB.Models.TaskDto) on controller ToDoApp.Controllers.TaskController (ToDoApp).
+2024-06-20 11:20:52.310 +05:30 [ERR] Error occurred while creating the task
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ToDoApp.DAL.Repository.TaskRepository.InsertTask(TaskDto taskDto) in C:\Tasks\ToDo.WebApi\ToDoApp.DAL\Repository\TaskRepository.cs:line 20
+   at ToDoApp.BAL.Service.TaskService.InsertTask(TaskDto taskDto) in C:\Tasks\ToDo.WebApi\ToDoApp.BAL\Service\TaskService.cs:line 18
+   at ToDoApp.Controllers.TaskController.CreateTask(TaskDto taskDto) in C:\Tasks\ToDo.WebApi\ToDoApp\Controllers\TaskController.cs:line 75
+2024-06-20 11:20:52.325 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 11:20:52.327 +05:30 [INF] Executed action ToDoApp.Controllers.TaskController.CreateTask (ToDoApp) in 17.0033ms
+2024-06-20 11:20:52.327 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.TaskController.CreateTask (ToDoApp)'
+2024-06-20 11:20:52.328 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5279/Task - 200 null application/json; charset=utf-8 31.3854ms
+2024-06-20 11:21:14.746 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5279/Task - application/json 224
+2024-06-20 11:21:14.747 +05:30 [INF] CORS policy execution successful.
+2024-06-20 11:21:14.748 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.TaskController.CreateTask (ToDoApp)'
+2024-06-20 11:21:14.749 +05:30 [INF] Route matched with {action = "CreateTask", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Int32]] CreateTask(ToDoApp.DB.Models.TaskDto) on controller ToDoApp.Controllers.TaskController (ToDoApp).
+2024-06-20 11:21:14.751 +05:30 [ERR] Error occurred while creating the task
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ToDoApp.DAL.Repository.TaskRepository.InsertTask(TaskDto taskDto) in C:\Tasks\ToDo.WebApi\ToDoApp.DAL\Repository\TaskRepository.cs:line 20
+   at ToDoApp.BAL.Service.TaskService.InsertTask(TaskDto taskDto) in C:\Tasks\ToDo.WebApi\ToDoApp.BAL\Service\TaskService.cs:line 18
+   at ToDoApp.Controllers.TaskController.CreateTask(TaskDto taskDto) in C:\Tasks\ToDo.WebApi\ToDoApp\Controllers\TaskController.cs:line 75
+2024-06-20 11:21:14.755 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 11:21:14.755 +05:30 [INF] Executed action ToDoApp.Controllers.TaskController.CreateTask (ToDoApp) in 6.4263ms
+2024-06-20 11:21:14.756 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.TaskController.CreateTask (ToDoApp)'
+2024-06-20 11:21:14.756 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5279/Task - 200 null application/json; charset=utf-8 10.0501ms
+2024-06-20 11:21:23.131 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5279/Task - application/json 224
+2024-06-20 11:21:23.132 +05:30 [INF] CORS policy execution successful.
+2024-06-20 11:21:23.132 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.TaskController.CreateTask (ToDoApp)'
+2024-06-20 11:21:23.133 +05:30 [INF] Route matched with {action = "CreateTask", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Int32]] CreateTask(ToDoApp.DB.Models.TaskDto) on controller ToDoApp.Controllers.TaskController (ToDoApp).
+2024-06-20 11:21:23.133 +05:30 [ERR] Error occurred while creating the task
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at ToDoApp.DAL.Repository.TaskRepository.InsertTask(TaskDto taskDto) in C:\Tasks\ToDo.WebApi\ToDoApp.DAL\Repository\TaskRepository.cs:line 20
+   at ToDoApp.BAL.Service.TaskService.InsertTask(TaskDto taskDto) in C:\Tasks\ToDo.WebApi\ToDoApp.BAL\Service\TaskService.cs:line 18
+   at ToDoApp.Controllers.TaskController.CreateTask(TaskDto taskDto) in C:\Tasks\ToDo.WebApi\ToDoApp\Controllers\TaskController.cs:line 75
+2024-06-20 11:21:23.135 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 11:21:23.137 +05:30 [INF] Executed action ToDoApp.Controllers.TaskController.CreateTask (ToDoApp) in 3.1833ms
+2024-06-20 11:21:23.138 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.TaskController.CreateTask (ToDoApp)'
+2024-06-20 11:21:23.138 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5279/Task - 200 null application/json; charset=utf-8 7.0433ms
+2024-06-20 11:23:40.950 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/index.html - null null
+2024-06-20 11:23:40.967 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/index.html - 200 null text/html;charset=utf-8 16.9557ms
+2024-06-20 11:23:40.984 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-20 11:23:40.986 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 2.1588ms
+2024-06-20 11:23:41.170 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - null null
+2024-06-20 11:23:41.183 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.7221ms
+2024-06-20 11:24:26.865 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/index.html - null null
+2024-06-20 11:24:26.881 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/index.html - 200 null text/html;charset=utf-8 16.2623ms
+2024-06-20 11:24:26.952 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-20 11:24:26.953 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.3043ms
+2024-06-20 11:24:27.134 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - null null
+2024-06-20 11:24:27.144 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.2384ms
+2024-06-20 11:25:04.523 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/index.html - null null
+2024-06-20 11:25:04.537 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/index.html - 200 null text/html;charset=utf-8 14.3747ms
+2024-06-20 11:25:04.556 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-20 11:25:04.557 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.2302ms
+2024-06-20 11:25:04.704 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - null null
+2024-06-20 11:25:04.714 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.3448ms
+2024-06-20 11:25:06.660 +05:30 [INF] Application is shutting down...

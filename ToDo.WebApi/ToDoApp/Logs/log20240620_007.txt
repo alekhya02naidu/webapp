@@ -1,0 +1,90 @@
+2024-06-20 18:07:41.327 +05:30 [INF] User profile is available. Using 'C:\Users\alekhya.n\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-20 18:07:41.461 +05:30 [INF] Now listening on: http://localhost:5279
+2024-06-20 18:07:41.463 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-20 18:07:41.464 +05:30 [INF] Hosting environment: Development
+2024-06-20 18:07:41.464 +05:30 [INF] Content root path: C:\Tasks\ToDo.WebApi\ToDoApp
+2024-06-20 18:07:41.799 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/index.html - null null
+2024-06-20 18:07:42.112 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/index.html - 200 null text/html;charset=utf-8 314.7368ms
+2024-06-20 18:07:42.161 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-20 18:07:42.163 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 1.8665ms
+2024-06-20 18:07:42.273 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - null null
+2024-06-20 18:07:42.492 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 219.1657ms
+2024-06-20 18:07:55.678 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5279/Account/SignIn - application/json 64
+2024-06-20 18:07:55.682 +05:30 [INF] CORS policy execution successful.
+2024-06-20 18:07:55.683 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-06-20 18:07:55.742 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.AccountController.Login (ToDoApp)'
+2024-06-20 18:07:55.759 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.String]] Login(ToDoApp.DB.Models.UserDto) on controller ToDoApp.Controllers.AccountController (ToDoApp).
+2024-06-20 18:07:56.864 +05:30 [INF] Executed DbCommand (35ms) [Parameters=[@__username_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[PasswordHash], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+2024-06-20 18:07:57.341 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__username_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[PasswordHash], [u].[Username]
+FROM [UserDTO] AS [u]
+WHERE [u].[Username] = @__username_0
+2024-06-20 18:07:57.372 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 18:07:57.384 +05:30 [INF] Executed action ToDoApp.Controllers.AccountController.Login (ToDoApp) in 1622.1726ms
+2024-06-20 18:07:57.385 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.AccountController.Login (ToDoApp)'
+2024-06-20 18:07:57.400 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5279/Account/SignIn - 200 null application/json; charset=utf-8 1722.1345ms
+2024-06-20 18:08:19.748 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask - null null
+2024-06-20 18:08:19.795 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp)'
+2024-06-20 18:08:19.798 +05:30 [INF] Route matched with {action = "GetTasksByUserId", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Collections.Generic.IEnumerable`1[ToDoApp.DB.Models.TaskDto]]] GetTasksByUserIdAsync() on controller ToDoApp.Controllers.TaskController (ToDoApp).
+2024-06-20 18:08:19.879 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreatedAt], [t].[Description], [t].[Id], [t].[IsCompleted], [t].[Title], [t].[UpdatedAt], [t].[UserId]
+FROM [TaskDTO] AS [t]
+WHERE [t].[UserId] = @__userId_0
+2024-06-20 18:08:19.883 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ToDoApp.DB.Models.TaskDto, ToDoApp.DB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 18:08:19.900 +05:30 [INF] Executed action ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp) in 101.4586ms
+2024-06-20 18:08:19.900 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp)'
+2024-06-20 18:08:19.905 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask - 200 null application/json; charset=utf-8 156.5274ms
+2024-06-20 18:08:21.949 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask - null null
+2024-06-20 18:08:21.966 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp)'
+2024-06-20 18:08:21.970 +05:30 [INF] Route matched with {action = "GetTasksByUserId", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Collections.Generic.IEnumerable`1[ToDoApp.DB.Models.TaskDto]]] GetTasksByUserIdAsync() on controller ToDoApp.Controllers.TaskController (ToDoApp).
+2024-06-20 18:08:21.981 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreatedAt], [t].[Description], [t].[Id], [t].[IsCompleted], [t].[Title], [t].[UpdatedAt], [t].[UserId]
+FROM [TaskDTO] AS [t]
+WHERE [t].[UserId] = @__userId_0
+2024-06-20 18:08:21.982 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ToDoApp.DB.Models.TaskDto, ToDoApp.DB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 18:08:21.983 +05:30 [INF] Executed action ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp) in 12.6466ms
+2024-06-20 18:08:21.983 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp)'
+2024-06-20 18:08:21.985 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask - 200 null application/json; charset=utf-8 34.6288ms
+2024-06-20 18:08:45.926 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5279/Task/DeleteTasks?ids=2&ids=4 - null null
+2024-06-20 18:08:45.927 +05:30 [INF] CORS policy execution successful.
+2024-06-20 18:08:45.930 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.TaskController.DeleteTasks (ToDoApp)'
+2024-06-20 18:08:45.941 +05:30 [INF] Route matched with {action = "DeleteTasks", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Int32]] DeleteTasks(Int32[]) on controller ToDoApp.Controllers.TaskController (ToDoApp).
+2024-06-20 18:08:46.039 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__ids_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[CreatedAt], [t].[Description], [t].[IsCompleted], [t].[Title], [t].[UpdatedAt], [t].[UserId]
+FROM [Tasks] AS [t]
+WHERE [t].[Id] IN (
+    SELECT [i].[value]
+    FROM OPENJSON(@__ids_0) WITH ([value] int '$') AS [i]
+)
+2024-06-20 18:08:46.168 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Tasks]
+OUTPUT 1
+WHERE [Id] = @p0;
+DELETE FROM [Tasks]
+OUTPUT 1
+WHERE [Id] = @p1;
+2024-06-20 18:08:46.197 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 18:08:46.200 +05:30 [INF] Executed action ToDoApp.Controllers.TaskController.DeleteTasks (ToDoApp) in 258.5027ms
+2024-06-20 18:08:46.200 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.TaskController.DeleteTasks (ToDoApp)'
+2024-06-20 18:08:46.201 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5279/Task/DeleteTasks?ids=2&ids=4 - 200 null application/json; charset=utf-8 274.631ms
+2024-06-20 18:08:53.518 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask - null null
+2024-06-20 18:08:53.520 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp)'
+2024-06-20 18:08:53.520 +05:30 [INF] Route matched with {action = "GetTasksByUserId", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Collections.Generic.IEnumerable`1[ToDoApp.DB.Models.TaskDto]]] GetTasksByUserIdAsync() on controller ToDoApp.Controllers.TaskController (ToDoApp).
+2024-06-20 18:08:53.528 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreatedAt], [t].[Description], [t].[Id], [t].[IsCompleted], [t].[Title], [t].[UpdatedAt], [t].[UserId]
+FROM [TaskDTO] AS [t]
+WHERE [t].[UserId] = @__userId_0
+2024-06-20 18:08:53.530 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ToDoApp.DB.Models.TaskDto, ToDoApp.DB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-20 18:08:53.531 +05:30 [INF] Executed action ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp) in 10.8463ms
+2024-06-20 18:08:53.532 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp)'
+2024-06-20 18:08:53.534 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask - 200 null application/json; charset=utf-8 15.6097ms
+2024-06-20 18:26:32.343 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/index.html - null null
+2024-06-20 18:26:32.344 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/index.html - 200 null text/html;charset=utf-8 1.54ms
+2024-06-20 18:26:32.397 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-20 18:26:32.398 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 1.1452ms
+2024-06-20 18:26:32.603 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - null null
+2024-06-20 18:26:32.612 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.709ms

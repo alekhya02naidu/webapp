@@ -1,0 +1,162 @@
+2024-06-19 19:31:08.154 +05:30 [INF] User profile is available. Using 'C:\Users\alekhya.n\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-06-19 19:31:08.334 +05:30 [INF] Now listening on: http://localhost:5279
+2024-06-19 19:31:08.337 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-19 19:31:08.338 +05:30 [INF] Hosting environment: Development
+2024-06-19 19:31:08.339 +05:30 [INF] Content root path: C:\Tasks\ToDo.WebApi\ToDoApp
+2024-06-19 19:31:08.419 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/index.html - null null
+2024-06-19 19:31:08.603 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/index.html - 200 null text/html;charset=utf-8 185.238ms
+2024-06-19 19:31:08.726 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-19 19:31:08.731 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 5.5695ms
+2024-06-19 19:31:09.274 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - null null
+2024-06-19 19:31:09.472 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 198.6757ms
+2024-06-19 19:31:30.586 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5279/Account/SignIn - application/json 64
+2024-06-19 19:31:30.592 +05:30 [INF] CORS policy execution successful.
+2024-06-19 19:31:30.598 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-06-19 19:31:30.654 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.AccountController.Login (ToDoApp)'
+2024-06-19 19:31:30.673 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.String]] Login(ToDoApp.DB.Models.UserDto) on controller ToDoApp.Controllers.AccountController (ToDoApp).
+2024-06-19 19:31:31.972 +05:30 [INF] Executed DbCommand (43ms) [Parameters=[@__username_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[PasswordHash], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+2024-06-19 19:31:32.042 +05:30 [INF] Executed action ToDoApp.Controllers.AccountController.Login (ToDoApp) in 1365.7282ms
+2024-06-19 19:31:32.043 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.AccountController.Login (ToDoApp)'
+2024-06-19 19:31:32.047 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+BCrypt.Net.SaltParseException: Invalid salt version
+   at BCrypt.Net.BCrypt.HashPassword(String inputKey, String salt, Boolean enhancedEntropy, HashType hashType)
+   at BCrypt.Net.BCrypt.Verify(String text, String hash, Boolean enhancedEntropy, HashType hashType)
+   at ToDoApp.DAL.Repository.AccountRepository.VerifyPassword(String password, String hashedPassword) in C:\Tasks\ToDo.WebApi\ToDoApp.DAL\Repository\AccountRepository.cs:line 50
+   at ToDoApp.DAL.Repository.AccountRepository.Authenticate(String username, String password) in C:\Tasks\ToDo.WebApi\ToDoApp.DAL\Repository\AccountRepository.cs:line 40
+   at ToDoApp.BAL.Service.AccountService.Authenticate(String username, String password) in C:\Tasks\ToDo.WebApi\ToDoApp.BAL\Service\AccountService.cs:line 23
+   at ToDoApp.Controllers.AccountController.Login(UserDto userDto) in C:\Tasks\ToDo.WebApi\ToDoApp\Controllers\AccountController.cs:line 67
+   at lambda_method6(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-06-19 19:31:32.091 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5279/Account/SignIn - 500 null text/plain; charset=utf-8 1505.241ms
+2024-06-19 19:32:06.452 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/index.html - null null
+2024-06-19 19:32:06.455 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/index.html - 200 null text/html;charset=utf-8 3.6793ms
+2024-06-19 19:32:06.482 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-19 19:32:06.484 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 1.9581ms
+2024-06-19 19:32:06.576 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - null null
+2024-06-19 19:32:06.586 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.335ms
+2024-06-19 19:32:29.658 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5279/Account/SignUp - application/json 55
+2024-06-19 19:32:29.659 +05:30 [INF] CORS policy execution successful.
+2024-06-19 19:32:29.665 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.AccountController.RegisterUser (ToDoApp)'
+2024-06-19 19:32:29.677 +05:30 [INF] Route matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Int32]] RegisterUser(ToDoApp.DB.Models.UserDto) on controller ToDoApp.Controllers.AccountController (ToDoApp).
+2024-06-19 19:32:30.148 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([PasswordHash], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2024-06-19 19:32:30.177 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-19 19:32:30.192 +05:30 [INF] Executed action ToDoApp.Controllers.AccountController.RegisterUser (ToDoApp) in 515.0731ms
+2024-06-19 19:32:30.193 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.AccountController.RegisterUser (ToDoApp)'
+2024-06-19 19:32:30.194 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5279/Account/SignUp - 200 null application/json; charset=utf-8 536.3356ms
+2024-06-19 19:32:42.483 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5279/Account/SignIn - application/json 55
+2024-06-19 19:32:42.484 +05:30 [INF] CORS policy execution successful.
+2024-06-19 19:32:42.487 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.AccountController.Login (ToDoApp)'
+2024-06-19 19:32:42.488 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.String]] Login(ToDoApp.DB.Models.UserDto) on controller ToDoApp.Controllers.AccountController (ToDoApp).
+2024-06-19 19:32:42.567 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__username_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[PasswordHash], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+2024-06-19 19:32:42.768 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__username_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[PasswordHash], [u].[Username]
+FROM [UserDTO] AS [u]
+WHERE [u].[Username] = @__username_0
+2024-06-19 19:32:42.807 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-19 19:32:42.809 +05:30 [INF] Executed action ToDoApp.Controllers.AccountController.Login (ToDoApp) in 319.5203ms
+2024-06-19 19:32:42.809 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.AccountController.Login (ToDoApp)'
+2024-06-19 19:32:42.810 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5279/Account/SignIn - 200 null application/json; charset=utf-8 326.7754ms
+2024-06-19 19:34:28.895 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/User - null null
+2024-06-19 19:34:28.896 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.UserController.GetAllUsers (ToDoApp)'
+2024-06-19 19:34:28.903 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Collections.Generic.IEnumerable`1[ToDoApp.DB.Models.UserDto]]] GetAllUsers() on controller ToDoApp.Controllers.UserController (ToDoApp).
+2024-06-19 19:34:28.925 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[PasswordHash], [u].[Username]
+FROM [UserDTO] AS [u]
+2024-06-19 19:34:28.928 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ToDoApp.DB.Models.UserDto, ToDoApp.DB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-19 19:34:28.940 +05:30 [INF] Executed action ToDoApp.Controllers.UserController.GetAllUsers (ToDoApp) in 36.9825ms
+2024-06-19 19:34:28.941 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.UserController.GetAllUsers (ToDoApp)'
+2024-06-19 19:34:28.942 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/User - 200 null application/json; charset=utf-8 47.7206ms
+2024-06-19 19:34:45.995 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5279/Account/SignUp - application/json 64
+2024-06-19 19:34:45.996 +05:30 [INF] CORS policy execution successful.
+2024-06-19 19:34:45.996 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.AccountController.RegisterUser (ToDoApp)'
+2024-06-19 19:34:45.996 +05:30 [INF] Route matched with {action = "RegisterUser", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Int32]] RegisterUser(ToDoApp.DB.Models.UserDto) on controller ToDoApp.Controllers.AccountController (ToDoApp).
+2024-06-19 19:34:46.196 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Users] ([PasswordHash], [Username])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2024-06-19 19:34:46.201 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-19 19:34:46.203 +05:30 [INF] Executed action ToDoApp.Controllers.AccountController.RegisterUser (ToDoApp) in 204.512ms
+2024-06-19 19:34:46.204 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.AccountController.RegisterUser (ToDoApp)'
+2024-06-19 19:34:46.206 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5279/Account/SignUp - 200 null application/json; charset=utf-8 210.5675ms
+2024-06-19 19:34:58.591 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5279/Account/SignIn - application/json 64
+2024-06-19 19:34:58.591 +05:30 [INF] CORS policy execution successful.
+2024-06-19 19:34:58.592 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.AccountController.Login (ToDoApp)'
+2024-06-19 19:34:58.592 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.String]] Login(ToDoApp.DB.Models.UserDto) on controller ToDoApp.Controllers.AccountController (ToDoApp).
+2024-06-19 19:34:58.599 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__username_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[PasswordHash], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+2024-06-19 19:34:58.826 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__username_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[PasswordHash], [u].[Username]
+FROM [UserDTO] AS [u]
+WHERE [u].[Username] = @__username_0
+2024-06-19 19:34:58.828 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-19 19:34:58.829 +05:30 [INF] Executed action ToDoApp.Controllers.AccountController.Login (ToDoApp) in 236.0437ms
+2024-06-19 19:34:58.829 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.AccountController.Login (ToDoApp)'
+2024-06-19 19:34:58.833 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5279/Account/SignIn - 200 null application/json; charset=utf-8 241.369ms
+2024-06-19 19:35:21.727 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/User - null null
+2024-06-19 19:35:21.780 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.UserController.GetAllUsers (ToDoApp)'
+2024-06-19 19:35:21.780 +05:30 [INF] Route matched with {action = "GetAllUsers", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Collections.Generic.IEnumerable`1[ToDoApp.DB.Models.UserDto]]] GetAllUsers() on controller ToDoApp.Controllers.UserController (ToDoApp).
+2024-06-19 19:35:21.792 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[PasswordHash], [u].[Username]
+FROM [UserDTO] AS [u]
+2024-06-19 19:35:21.793 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ToDoApp.DB.Models.UserDto, ToDoApp.DB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-19 19:35:21.796 +05:30 [INF] Executed action ToDoApp.Controllers.UserController.GetAllUsers (ToDoApp) in 15.5247ms
+2024-06-19 19:35:21.796 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.UserController.GetAllUsers (ToDoApp)'
+2024-06-19 19:35:21.797 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/User - 200 null application/json; charset=utf-8 70.4658ms
+2024-06-19 19:36:05.891 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/index.html - null null
+2024-06-19 19:36:05.909 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/index.html - 200 null text/html;charset=utf-8 17.7743ms
+2024-06-19 19:36:05.925 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-19 19:36:05.925 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.5427ms
+2024-06-19 19:36:06.160 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - null null
+2024-06-19 19:36:06.172 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.6535ms
+2024-06-19 19:36:40.168 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/index.html - null null
+2024-06-19 19:36:40.180 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/index.html - 200 null text/html;charset=utf-8 12.0718ms
+2024-06-19 19:36:40.195 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-19 19:36:40.196 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.3172ms
+2024-06-19 19:36:40.307 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - null null
+2024-06-19 19:36:40.313 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 5.8034ms
+2024-06-19 19:36:47.696 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/index.html - null null
+2024-06-19 19:36:47.714 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/index.html - 200 null text/html;charset=utf-8 18.0037ms
+2024-06-19 19:36:47.731 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-19 19:36:47.731 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 0.2541ms
+2024-06-19 19:36:47.850 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - null null
+2024-06-19 19:36:47.856 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 5.9112ms
+2024-06-19 19:39:00.832 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/index.html - null null
+2024-06-19 19:39:00.833 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/index.html - 200 null text/html;charset=utf-8 0.9697ms
+2024-06-19 19:39:00.852 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - null null
+2024-06-19 19:39:00.857 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/_framework/aspnetcore-browser-refresh.js - 200 13732 application/javascript; charset=utf-8 4.2896ms
+2024-06-19 19:39:00.962 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - null null
+2024-06-19 19:39:00.965 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 3.3116ms
+2024-06-19 19:39:08.109 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/Task - null null
+2024-06-19 19:39:08.130 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-06-19 19:39:08.134 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2024-06-19 19:39:08.138 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/Task - 401 0 null 28.8817ms

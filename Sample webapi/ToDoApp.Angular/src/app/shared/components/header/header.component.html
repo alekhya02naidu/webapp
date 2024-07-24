@@ -1,0 +1,23 @@
+<div class="header">
+    <div class="header-title">
+        <h2 class="desktop-title">{{ headerTitle }}</h2>
+        <h2 class="mobile-title">To-Do App</h2>
+    </div>
+    <div class="header-buttons">
+
+        <!-- mobile view -->
+        <div class="mobile-add-task">
+            <button (click)="toggleAddTask()">
+                <span>Add Task</span>
+                <small>+</small>
+            </button>
+        </div>
+
+        <div class="sign-out-btn">
+            <button (click)="signOut()">
+                <span>Sign out</span>
+                <img src="assets/icons/signout.svg" alt="signout icon" />
+            </button>
+        </div>
+    </div>
+</div>

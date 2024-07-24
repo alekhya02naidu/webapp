@@ -1,0 +1,11 @@
+2024-07-03 15:42:15.256 +05:30 [INF] User profile is available. Using 'C:\Users\alekhya.n\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-03 15:42:15.396 +05:30 [INF] Now listening on: http://localhost:5279
+2024-07-03 15:42:15.400 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-03 15:42:15.401 +05:30 [INF] Hosting environment: Development
+2024-07-03 15:42:15.401 +05:30 [INF] Content root path: C:\Tasks\full-web-app-Alekhya-Naidu\ToDoApp.WebApi\ToDoApp
+2024-07-03 15:45:50.626 +05:30 [INF] User profile is available. Using 'C:\Users\alekhya.n\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-03 15:45:50.813 +05:30 [INF] Now listening on: http://localhost:5279
+2024-07-03 15:45:50.816 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-03 15:45:50.817 +05:30 [INF] Hosting environment: Development
+2024-07-03 15:45:50.818 +05:30 [INF] Content root path: C:\Tasks\full-web-app-Alekhya-Naidu\ToDoApp.WebApi\ToDoApp
+2024-07-03 15:47:05.880 +05:30 [INF] Application is shutting down...

@@ -1,0 +1,12 @@
+C:\Tasks\Task5\EMS.Common\bin\Debug\net8.0\EMS.Common.deps.json
+C:\Tasks\Task5\EMS.Common\bin\Debug\net8.0\EMS.Common.dll
+C:\Tasks\Task5\EMS.Common\bin\Debug\net8.0\EMS.Common.pdb
+C:\Tasks\Task5\EMS.Common\obj\Debug\net8.0\EMS.Common.csproj.AssemblyReference.cache
+C:\Tasks\Task5\EMS.Common\obj\Debug\net8.0\EMS.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Tasks\Task5\EMS.Common\obj\Debug\net8.0\EMS.Common.AssemblyInfoInputs.cache
+C:\Tasks\Task5\EMS.Common\obj\Debug\net8.0\EMS.Common.AssemblyInfo.cs
+C:\Tasks\Task5\EMS.Common\obj\Debug\net8.0\EMS.Common.csproj.CoreCompileInputs.cache
+C:\Tasks\Task5\EMS.Common\obj\Debug\net8.0\EMS.Common.dll
+C:\Tasks\Task5\EMS.Common\obj\Debug\net8.0\refint\EMS.Common.dll
+C:\Tasks\Task5\EMS.Common\obj\Debug\net8.0\EMS.Common.pdb
+C:\Tasks\Task5\EMS.Common\obj\Debug\net8.0\ref\EMS.Common.dll

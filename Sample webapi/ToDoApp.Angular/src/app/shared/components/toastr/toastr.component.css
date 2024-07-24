@@ -1,0 +1,47 @@
+/* .toastr {
+  position: fixed;
+  top: 0.625rem;
+  right: 0.625rem;
+  padding: 0.625rem 1.25rem;
+  border-radius: .313rem;
+  margin-bottom: 0.625rem;
+  color: #fff;
+  font-size: .875rem;
+  animation: fadeInOut 3s;
+}
+
+.toastr.success {
+  background-color: #4caf50;
+}
+
+.toastr.error {
+  background-color: #f44336;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 1;
+  }
+} */
+
+.toastr {
+  position: fixed;
+  top: 3.313rem;
+  right: 1.25rem;
+  padding: 0.625rem 1.25rem;
+  margin-bottom: 0.625rem;
+  border-radius: .313rem;
+  color: white;
+  z-index: 9999;
+}
+
+.toastr.success {
+  background-color: #91cf9f;
+}
+
+.toastr.error {
+  background-color: #dc717b;
+}

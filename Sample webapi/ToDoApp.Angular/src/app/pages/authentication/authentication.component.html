@@ -1,0 +1,25 @@
+<div [ngClass]="isSignInMode ? 'auth-container sign-in' : 'auth-container sign-up'">
+    <form (ngSubmit)="onSubmit()">
+        <div class="title">
+            <h1>To-Do App</h1>
+            <span>Start organizing your life day by day</span>
+        </div>
+        <div class="form-content">
+            <div class="form-input">
+                <input [(ngModel)]="username" name="username" type="text" placeholder="Enter your username" />
+            </div>
+            <div class="form-input">
+                <input [(ngModel)]="password" name="password" [type]="isPasswordVisible? 'text' : 'password'" placeholder="Enter your password" />
+                <img src="assets/icons/{{ isPasswordVisible? 'password-visible-dark.svg' : 'hidden-icon-dark.svg' }}" 
+                    alt="toggle password visibility" (click)="togglePasswordVisibility()" />
+            </div>
+        </div>
+        <div class="auth-btn">
+            <button type="submit">{{ isSignInMode ? 'Sign In' : 'Sign Up' }}</button>
+            <span>
+                {{ isSignInMode ? 'Don’t have an account? Create '  : 'Already have an account? Sign in ' }}
+                <a (click)="toggleMode()">{{ isSignInMode ? ' here' : ' here' }}</a>.
+            </span>
+        </div>
+    </form>
+</div>

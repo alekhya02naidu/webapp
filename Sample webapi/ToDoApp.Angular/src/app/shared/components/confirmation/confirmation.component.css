@@ -1,0 +1,36 @@
+.confirmation {
+    background: rgb(252, 247, 247);
+    color: #fff;
+    padding: 1.25rem;
+    position: fixed;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    border-radius: .313rem;
+    text-align: center;
+    border: 1px solid #F44848;
+}
+
+.confirmation p {
+    margin: 0 0 .625rem;
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-size: 1rem;
+}
+
+.confirmation button {
+    margin: 0 .313rem;
+    border: none;
+    outline: none;
+    width: 4rem;
+    height: 2rem;
+    border-radius: .313rem;
+    margin-right: .5rem;
+}
+
+.confirmation button:hover {
+    color: white;
+    background-color: #BA5112;
+}

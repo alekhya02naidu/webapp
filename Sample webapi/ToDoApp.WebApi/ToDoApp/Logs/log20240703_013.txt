@@ -1,0 +1,14 @@
+2024-07-03 15:36:39.577 +05:30 [INF] User profile is available. Using 'C:\Users\alekhya.n\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-03 15:36:39.763 +05:30 [INF] Now listening on: http://localhost:5279
+2024-07-03 15:36:39.766 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-03 15:36:39.766 +05:30 [INF] Hosting environment: Development
+2024-07-03 15:36:39.766 +05:30 [INF] Content root path: C:\Tasks\full-web-app-Alekhya-Naidu\ToDoApp.WebApi\ToDoApp
+2024-07-03 15:36:40.202 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/index.html - null null
+2024-07-03 15:36:40.305 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-07-03 15:36:40.500 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/index.html - 404 0 null 303.9725ms
+2024-07-03 15:36:40.522 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5279/swagger/index.html, Response status code: 404
+2024-07-03 15:42:15.256 +05:30 [INF] User profile is available. Using 'C:\Users\alekhya.n\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-03 15:42:15.396 +05:30 [INF] Now listening on: http://localhost:5279
+2024-07-03 15:42:15.400 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-03 15:42:15.401 +05:30 [INF] Hosting environment: Development
+2024-07-03 15:42:15.401 +05:30 [INF] Content root path: C:\Tasks\full-web-app-Alekhya-Naidu\ToDoApp.WebApi\ToDoApp

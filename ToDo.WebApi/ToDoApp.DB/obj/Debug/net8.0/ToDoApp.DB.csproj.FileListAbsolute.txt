@@ -1,0 +1,14 @@
+C:\Tasks\ToDo.WebApi\ToDoApp.DB\bin\Debug\net8.0\ToDoApp.DB.deps.json
+C:\Tasks\ToDo.WebApi\ToDoApp.DB\bin\Debug\net8.0\ToDoApp.DB.runtimeconfig.json
+C:\Tasks\ToDo.WebApi\ToDoApp.DB\bin\Debug\net8.0\ToDoApp.DB.dll
+C:\Tasks\ToDo.WebApi\ToDoApp.DB\bin\Debug\net8.0\ToDoApp.DB.pdb
+C:\Tasks\ToDo.WebApi\ToDoApp.DB\obj\Debug\net8.0\ToDoApp.DB.csproj.AssemblyReference.cache
+C:\Tasks\ToDo.WebApi\ToDoApp.DB\obj\Debug\net8.0\ToDoApp.DB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Tasks\ToDo.WebApi\ToDoApp.DB\obj\Debug\net8.0\ToDoApp.DB.AssemblyInfoInputs.cache
+C:\Tasks\ToDo.WebApi\ToDoApp.DB\obj\Debug\net8.0\ToDoApp.DB.AssemblyInfo.cs
+C:\Tasks\ToDo.WebApi\ToDoApp.DB\obj\Debug\net8.0\ToDoApp.DB.csproj.CoreCompileInputs.cache
+C:\Tasks\ToDo.WebApi\ToDoApp.DB\obj\Debug\net8.0\ToDoApp.DB.dll
+C:\Tasks\ToDo.WebApi\ToDoApp.DB\obj\Debug\net8.0\refint\ToDoApp.DB.dll
+C:\Tasks\ToDo.WebApi\ToDoApp.DB\obj\Debug\net8.0\ToDoApp.DB.pdb
+C:\Tasks\ToDo.WebApi\ToDoApp.DB\obj\Debug\net8.0\ToDoApp.DB.genruntimeconfig.cache
+C:\Tasks\ToDo.WebApi\ToDoApp.DB\obj\Debug\net8.0\ref\ToDoApp.DB.dll

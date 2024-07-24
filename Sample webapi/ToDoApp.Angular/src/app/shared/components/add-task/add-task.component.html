@@ -1,0 +1,12 @@
+<div class="add-task-section" *ngIf="showAddTask">
+    <div class="add-task-contents">
+        <div class="task-input">
+            <input type="text" placeholder="Add title" [(ngModel)]="taskTitle"/>
+            <textarea class="task-description" cols="80" rows="10" placeholder="Add description" [(ngModel)]="taskDescription"></textarea>
+        </div>
+        <div class="submit-btns">
+            <button class="cancel" (click)="close()">Cancel</button>
+            <button class="save" (click)="saveTask()">Save</button>
+        </div>
+    </div>
+</div>

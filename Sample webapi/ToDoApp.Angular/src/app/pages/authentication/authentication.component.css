@@ -1,0 +1,264 @@
+.auth-container {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 4rem 7.5rem;
+  background-image: url("/assets/images/sign-in-bg.png");
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 65%;
+  height: 24rem;
+  padding: 3rem 2rem 1.5rem 2rem;
+  border-radius: 1.25rem 0 0 0;
+  text-align: center;
+  box-shadow: .25rem .25rem 1rem 0 #0000001A;
+  border-radius: 1rem;
+  margin-left: 8rem;
+  background: white;
+}
+
+.title {
+  width: 100%;
+  gap: .625rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+h1 {
+  font-size: 2.7rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.title span {
+  font-size: .75rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  text-align: center;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+  width: 100%;
+  align-items: center;
+}
+
+.form-input {
+  display: flex;
+  width: 32rem;
+  height: 3rem;
+  border-radius: .75rem;
+  box-shadow: .125rem .125rem .5rem 0 #0000001A;
+  align-items: center;
+  background-color: white;
+}
+
+input {
+  padding: 0rem 1.5rem;
+  margin-left: .3rem;
+  width: 80%;
+  height: 2.5rem;
+  gap: .625rem;
+  border: none;
+  outline: none;
+  color: black;
+  font-size: 1rem;
+}
+
+.form-input img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.auth-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+button {
+  width: 10rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: .75rem;
+  padding: 1rem .625rem 1rem .625rem;
+  box-shadow: 0.125rem 0.125rem 0.375rem 0  #0000001A;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+span {
+  display: flex;
+  align-items: center;
+  font-size: .9rem;
+  font-weight: 400;
+  line-height: 1.5625rem;
+  text-align: center;
+  gap: .2rem;
+}
+
+a {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5625rem;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Specific Styles for Sign-In */
+.sign-in h1 {
+  color: #BA5112;
+}
+
+.sign-in .title span {
+  color: #251814;
+}
+
+.sign-in button {
+  background: #EDB046;
+  color: white;
+}
+
+.sign-in span {
+  color: #251814;
+}
+
+.sign-in a {
+  color: #BA5112;
+}
+
+.sign-up form {
+  background: #EDB046;
+}
+
+.sign-up h1 {
+  color: white;
+}
+
+.sign-up .title span {
+  color: white;
+}
+
+.sign-up button {
+  background: #BA5112;
+  color: white;
+}
+
+.sign-up span {
+  color: white;
+}
+
+.sign-up a {
+  color: #BA5112;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .auth-container {
+    padding: 3rem 5rem;
+  }
+
+  form {
+    width: 75%;
+    margin-left: 5rem;
+  }
+
+  .form-input {
+    width: 28rem;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  .title span {
+    font-size: .875rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .auth-container {
+    padding: 2rem 3rem;
+  }
+
+  form {
+    width: 85%;
+    margin-left: 3rem;
+  }
+
+  .form-input {
+    width: 24rem;
+  }
+
+  h1 {
+    font-size: 1.875remr;
+  }
+
+  .title span {
+    font-size: .8125;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-container {
+    background-size: cover;
+    padding: 1rem 1.5rem;
+  }
+
+  form {
+    width: 100%;
+    margin-left: 0;
+    padding: 2rem 1rem;
+    height: auto;
+  }
+
+  .form-input {
+    width: 100%;
+    height: 2.5rem;
+  }
+
+  input {
+    width: 75%;
+    height: 2rem;
+    padding: 0rem 1rem;
+    font-size: .875rem;
+  }
+
+  .form-input img {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  button {
+    width: 100%;
+    font-size: .875rem;
+    padding: .625rem 0;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .title span {
+    font-size: .75rem;
+  }
+
+  span {
+    font-size: .875rem;
+  }
+
+  a {
+    font-size: .875rem;
+  }
+}

@@ -1,0 +1,58 @@
+2024-07-03 14:47:22.980 +05:30 [INF] User profile is available. Using 'C:\Users\alekhya.n\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-03 14:47:23.161 +05:30 [INF] Now listening on: http://localhost:5279
+2024-07-03 14:47:23.182 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-03 14:47:23.190 +05:30 [INF] Hosting environment: Development
+2024-07-03 14:47:23.197 +05:30 [INF] Content root path: C:\Tasks\full-web-app-Alekhya-Naidu\ToDoApp.WebApi\ToDoApp
+2024-07-03 14:47:31.034 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/index.html - null null
+2024-07-03 14:47:31.122 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/index.html - 200 null text/html;charset=utf-8 88.6456ms
+2024-07-03 14:47:31.249 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - null null
+2024-07-03 14:47:31.402 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 153.2186ms
+2024-07-03 14:47:47.353 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/index.html - null null
+2024-07-03 14:47:47.367 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/index.html - 200 null text/html;charset=utf-8 13.5861ms
+2024-07-03 14:47:47.453 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - null null
+2024-07-03 14:47:47.484 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 30.9098ms
+2024-07-03 14:49:29.033 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5279/api/v1.0/Account/SignIn - application/json-patch+json 64
+2024-07-03 14:49:29.040 +05:30 [INF] CORS policy execution successful.
+2024-07-03 14:49:29.051 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-07-03 14:49:29.125 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.AccountController.Login (ToDoApp)'
+2024-07-03 14:49:29.143 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.String]] Login(ToDoApp.DAL.DTO.UserDto) on controller ToDoApp.Controllers.AccountController (ToDoApp).
+2024-07-03 14:49:31.785 +05:30 [INF] Executed DbCommand (40ms) [Parameters=[@__username_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[PasswordHash], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+2024-07-03 14:49:32.178 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__username_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[PasswordHash], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+2024-07-03 14:49:32.206 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-07-03 14:49:32.244 +05:30 [INF] Executed action ToDoApp.Controllers.AccountController.Login (ToDoApp) in 3088.7194ms
+2024-07-03 14:49:32.249 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.AccountController.Login (ToDoApp)'
+2024-07-03 14:49:32.259 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5279/api/v1.0/Account/SignIn - 200 399 application/json; charset=utf-8 3226.3629ms
+2024-07-03 14:51:24.133 +05:30 [INF] Application is shutting down...
+2024-07-03 14:51:30.411 +05:30 [INF] User profile is available. Using 'C:\Users\alekhya.n\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-03 14:51:30.569 +05:30 [INF] Now listening on: http://localhost:5279
+2024-07-03 14:51:30.577 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-03 14:51:30.582 +05:30 [INF] Hosting environment: Development
+2024-07-03 14:51:30.601 +05:30 [INF] Content root path: C:\Tasks\full-web-app-Alekhya-Naidu\ToDoApp.WebApi\ToDoApp
+2024-07-03 14:51:39.862 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/index.html - null null
+2024-07-03 14:51:39.949 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/index.html - 200 null text/html;charset=utf-8 87.0375ms
+2024-07-03 14:51:40.037 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - null null
+2024-07-03 14:51:40.192 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 154.7363ms
+2024-07-03 14:52:07.438 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5279/api/v1.0/Account/SignIn - application/json-patch+json 64
+2024-07-03 14:52:07.448 +05:30 [INF] CORS policy execution successful.
+2024-07-03 14:52:07.454 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-07-03 14:52:07.531 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.AccountController.Login (ToDoApp)'
+2024-07-03 14:52:07.547 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.String]] Login(ToDoApp.DAL.DTO.UserDto) on controller ToDoApp.Controllers.AccountController (ToDoApp).
+2024-07-03 14:52:08.650 +05:30 [INF] Executed DbCommand (30ms) [Parameters=[@__username_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[PasswordHash], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+2024-07-03 14:52:09.084 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__username_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[PasswordHash], [u].[Username]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__username_0
+2024-07-03 14:52:09.110 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-07-03 14:52:09.158 +05:30 [INF] Executed action ToDoApp.Controllers.AccountController.Login (ToDoApp) in 1600.5257ms
+2024-07-03 14:52:09.160 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.AccountController.Login (ToDoApp)'
+2024-07-03 14:52:09.173 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5279/api/v1.0/Account/SignIn - 200 399 application/json; charset=utf-8 1735.1335ms
+2024-07-03 14:52:24.038 +05:30 [INF] Application is shutting down...

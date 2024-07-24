@@ -1,0 +1,14 @@
+ <!-- Mobile view -->
+ <div class="sidebar-dropdown">
+    <div class="dropdown-option" (click)="toggleDropdown()">
+        <span [ngClass]="{selected: true}">{{ currentPage }}</span>
+        <img src="assets/icons/expand-more.svg" alt="icon to expand more" />
+    </div>
+    <div class="dropdown-content" [class.show]="dropdownOpen">
+        <span *ngFor="let option of filteredNavOptions"
+            (click)="onNavOptionSelected(option)"
+            [ngClass]="{selected: option === currentPage}">
+            {{ option }}
+        </span>
+    </div>
+</div>

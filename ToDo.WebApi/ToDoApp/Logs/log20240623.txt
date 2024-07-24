@@ -1,0 +1,117 @@
+2024-06-23 10:34:47.506 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5279/Task/UserSpecificTask - null null
+2024-06-23 10:34:47.684 +05:30 [INF] CORS policy execution successful.
+2024-06-23 10:34:47.686 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5279/Task/UserSpecificTask - 204 null null 180.2189ms
+2024-06-23 10:34:47.690 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask - null null
+2024-06-23 10:34:47.692 +05:30 [INF] CORS policy execution successful.
+2024-06-23 10:34:47.704 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp)'
+2024-06-23 10:34:47.705 +05:30 [INF] Route matched with {action = "GetTasksByUserId", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Collections.Generic.IEnumerable`1[ToDoApp.DB.Models.TaskDto]]] GetTasksByUserIdAsync() on controller ToDoApp.Controllers.TaskController (ToDoApp).
+2024-06-23 10:34:50.872 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreatedAt], [t].[Description], [t].[Id], [t].[IsCompleted], [t].[Title], [t].[UpdatedAt], [t].[UserId]
+FROM [TaskDTO] AS [t]
+WHERE [t].[UserId] = @__userId_0
+2024-06-23 10:34:50.873 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ToDoApp.DB.Models.TaskDto, ToDoApp.DB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-23 10:34:50.873 +05:30 [INF] Executed action ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp) in 3167.4879ms
+2024-06-23 10:34:50.874 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp)'
+2024-06-23 10:34:50.874 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask - 200 null application/json; charset=utf-8 3183.6769ms
+2024-06-23 15:42:45.297 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5279/Task/UserSpecificTask - null null
+2024-06-23 15:42:45.307 +05:30 [INF] CORS policy execution successful.
+2024-06-23 15:42:45.307 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5279/Task/UserSpecificTask - 204 null null 9.8698ms
+2024-06-23 15:42:45.369 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask - null null
+2024-06-23 15:42:45.373 +05:30 [INF] CORS policy execution successful.
+2024-06-23 15:42:45.381 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp)'
+2024-06-23 15:42:45.382 +05:30 [INF] Route matched with {action = "GetTasksByUserId", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Collections.Generic.IEnumerable`1[ToDoApp.DB.Models.TaskDto]]] GetTasksByUserIdAsync() on controller ToDoApp.Controllers.TaskController (ToDoApp).
+2024-06-23 15:42:47.963 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreatedAt], [t].[Description], [t].[Id], [t].[IsCompleted], [t].[Title], [t].[UpdatedAt], [t].[UserId]
+FROM [TaskDTO] AS [t]
+WHERE [t].[UserId] = @__userId_0
+2024-06-23 15:42:47.963 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ToDoApp.DB.Models.TaskDto, ToDoApp.DB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-23 15:42:47.964 +05:30 [INF] Executed action ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp) in 2571.1483ms
+2024-06-23 15:42:47.964 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp)'
+2024-06-23 15:42:47.965 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask - 200 null application/json; charset=utf-8 2595.497ms
+2024-06-23 16:09:59.288 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5279/Task/UserSpecificTask - null null
+2024-06-23 16:09:59.289 +05:30 [INF] CORS policy execution successful.
+2024-06-23 16:09:59.289 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5279/Task/UserSpecificTask - 204 null null 0.8643ms
+2024-06-23 16:09:59.292 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask - null null
+2024-06-23 16:09:59.292 +05:30 [INF] CORS policy execution successful.
+2024-06-23 16:09:59.292 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp)'
+2024-06-23 16:09:59.293 +05:30 [INF] Route matched with {action = "GetTasksByUserId", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Collections.Generic.IEnumerable`1[ToDoApp.DB.Models.TaskDto]]] GetTasksByUserIdAsync() on controller ToDoApp.Controllers.TaskController (ToDoApp).
+2024-06-23 16:10:01.341 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreatedAt], [t].[Description], [t].[Id], [t].[IsCompleted], [t].[Title], [t].[UpdatedAt], [t].[UserId]
+FROM [TaskDTO] AS [t]
+WHERE [t].[UserId] = @__userId_0
+2024-06-23 16:10:01.341 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ToDoApp.DB.Models.TaskDto, ToDoApp.DB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-23 16:10:01.342 +05:30 [INF] Executed action ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp) in 2048.6762ms
+2024-06-23 16:10:01.342 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp)'
+2024-06-23 16:10:01.342 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask - 200 null application/json; charset=utf-8 2050.4248ms
+2024-06-23 16:10:04.908 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5279/Task/UserSpecificTask - null null
+2024-06-23 16:10:04.912 +05:30 [INF] CORS policy execution successful.
+2024-06-23 16:10:04.913 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5279/Task/UserSpecificTask - 204 null null 5.0662ms
+2024-06-23 16:10:05.026 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask - null null
+2024-06-23 16:10:05.043 +05:30 [INF] CORS policy execution successful.
+2024-06-23 16:10:05.045 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp)'
+2024-06-23 16:10:05.045 +05:30 [INF] Route matched with {action = "GetTasksByUserId", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Collections.Generic.IEnumerable`1[ToDoApp.DB.Models.TaskDto]]] GetTasksByUserIdAsync() on controller ToDoApp.Controllers.TaskController (ToDoApp).
+2024-06-23 16:10:05.062 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreatedAt], [t].[Description], [t].[Id], [t].[IsCompleted], [t].[Title], [t].[UpdatedAt], [t].[UserId]
+FROM [TaskDTO] AS [t]
+WHERE [t].[UserId] = @__userId_0
+2024-06-23 16:10:05.066 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ToDoApp.DB.Models.TaskDto, ToDoApp.DB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-23 16:10:05.073 +05:30 [INF] Executed action ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp) in 27.6946ms
+2024-06-23 16:10:05.376 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp)'
+2024-06-23 16:10:05.376 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask - 200 null application/json; charset=utf-8 350.0972ms
+2024-06-23 16:10:10.285 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5279/Task/UserSpecificTask - null null
+2024-06-23 16:10:10.287 +05:30 [INF] CORS policy execution successful.
+2024-06-23 16:10:10.299 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5279/Task/UserSpecificTask - 204 null null 13.8052ms
+2024-06-23 16:10:10.310 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask - null null
+2024-06-23 16:10:10.312 +05:30 [INF] CORS policy execution successful.
+2024-06-23 16:10:10.313 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp)'
+2024-06-23 16:10:10.313 +05:30 [INF] Route matched with {action = "GetTasksByUserId", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Collections.Generic.IEnumerable`1[ToDoApp.DB.Models.TaskDto]]] GetTasksByUserIdAsync() on controller ToDoApp.Controllers.TaskController (ToDoApp).
+2024-06-23 16:10:10.322 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreatedAt], [t].[Description], [t].[Id], [t].[IsCompleted], [t].[Title], [t].[UpdatedAt], [t].[UserId]
+FROM [TaskDTO] AS [t]
+WHERE [t].[UserId] = @__userId_0
+2024-06-23 16:10:10.326 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ToDoApp.DB.Models.TaskDto, ToDoApp.DB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-23 16:10:10.326 +05:30 [INF] Executed action ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp) in 13.1455ms
+2024-06-23 16:10:10.327 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp)'
+2024-06-23 16:10:10.328 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask - 200 null application/json; charset=utf-8 17.7517ms
+2024-06-23 16:10:12.697 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask - null null
+2024-06-23 16:10:12.700 +05:30 [INF] CORS policy execution successful.
+2024-06-23 16:10:12.712 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp)'
+2024-06-23 16:10:12.713 +05:30 [INF] Route matched with {action = "GetTasksByUserId", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Collections.Generic.IEnumerable`1[ToDoApp.DB.Models.TaskDto]]] GetTasksByUserIdAsync() on controller ToDoApp.Controllers.TaskController (ToDoApp).
+2024-06-23 16:10:12.715 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreatedAt], [t].[Description], [t].[Id], [t].[IsCompleted], [t].[Title], [t].[UpdatedAt], [t].[UserId]
+FROM [TaskDTO] AS [t]
+WHERE [t].[UserId] = @__userId_0
+2024-06-23 16:10:12.716 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ToDoApp.DB.Models.TaskDto, ToDoApp.DB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-23 16:10:12.716 +05:30 [INF] Executed action ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp) in 3.6989ms
+2024-06-23 16:10:12.722 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp)'
+2024-06-23 16:10:12.723 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask - 200 null application/json; charset=utf-8 25.9626ms
+2024-06-23 16:15:57.436 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5279/Task/UserSpecificTask - null null
+2024-06-23 16:15:57.436 +05:30 [INF] CORS policy execution successful.
+2024-06-23 16:15:57.436 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5279/Task/UserSpecificTask - 204 null null 0.3518ms
+2024-06-23 16:15:57.445 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask - null null
+2024-06-23 16:15:57.445 +05:30 [INF] CORS policy execution successful.
+2024-06-23 16:15:57.447 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp)'
+2024-06-23 16:15:57.447 +05:30 [INF] Route matched with {action = "GetTasksByUserId", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Collections.Generic.IEnumerable`1[ToDoApp.DB.Models.TaskDto]]] GetTasksByUserIdAsync() on controller ToDoApp.Controllers.TaskController (ToDoApp).
+2024-06-23 16:15:57.564 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreatedAt], [t].[Description], [t].[Id], [t].[IsCompleted], [t].[Title], [t].[UpdatedAt], [t].[UserId]
+FROM [TaskDTO] AS [t]
+WHERE [t].[UserId] = @__userId_0
+2024-06-23 16:15:57.564 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ToDoApp.DB.Models.TaskDto, ToDoApp.DB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-23 16:15:57.564 +05:30 [INF] Executed action ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp) in 115.8673ms
+2024-06-23 16:15:57.565 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp)'
+2024-06-23 16:15:57.565 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask - 200 null application/json; charset=utf-8 120.1586ms
+2024-06-23 16:20:39.937 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5279/Task/UserSpecificTask - null null
+2024-06-23 16:20:39.938 +05:30 [INF] CORS policy execution successful.
+2024-06-23 16:20:39.938 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5279/Task/UserSpecificTask - 204 null null 0.3421ms
+2024-06-23 16:20:39.940 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask - null null
+2024-06-23 16:20:39.941 +05:30 [INF] CORS policy execution successful.
+2024-06-23 16:20:39.942 +05:30 [INF] Executing endpoint 'ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp)'
+2024-06-23 16:20:39.942 +05:30 [INF] Route matched with {action = "GetTasksByUserId", controller = "Task"}. Executing controller action with signature System.Threading.Tasks.Task`1[ToDoApp.ResponseModel.ApiResponse`1[System.Collections.Generic.IEnumerable`1[ToDoApp.DB.Models.TaskDto]]] GetTasksByUserIdAsync() on controller ToDoApp.Controllers.TaskController (ToDoApp).
+2024-06-23 16:20:39.944 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[CreatedAt], [t].[Description], [t].[Id], [t].[IsCompleted], [t].[Title], [t].[UpdatedAt], [t].[UserId]
+FROM [TaskDTO] AS [t]
+WHERE [t].[UserId] = @__userId_0
+2024-06-23 16:20:39.946 +05:30 [INF] Executing ObjectResult, writing value of type 'ToDoApp.ResponseModel.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[ToDoApp.DB.Models.TaskDto, ToDoApp.DB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-06-23 16:20:39.947 +05:30 [INF] Executed action ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp) in 4.5094ms
+2024-06-23 16:20:39.947 +05:30 [INF] Executed endpoint 'ToDoApp.Controllers.TaskController.GetTasksByUserIdAsync (ToDoApp)'
+2024-06-23 16:20:39.948 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5279/Task/UserSpecificTask - 200 null application/json; charset=utf-8 7.9931ms

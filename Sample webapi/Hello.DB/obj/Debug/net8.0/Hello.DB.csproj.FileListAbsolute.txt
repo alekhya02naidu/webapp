@@ -1,0 +1,14 @@
+C:\Tasks\Sample webapi\Hello.DB\bin\Debug\net8.0\Hello.DB.deps.json
+C:\Tasks\Sample webapi\Hello.DB\bin\Debug\net8.0\Hello.DB.dll
+C:\Tasks\Sample webapi\Hello.DB\bin\Debug\net8.0\Hello.DB.pdb
+C:\Tasks\Sample webapi\Hello.DB\obj\Debug\net8.0\Hello.DB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Tasks\Sample webapi\Hello.DB\obj\Debug\net8.0\Hello.DB.AssemblyInfoInputs.cache
+C:\Tasks\Sample webapi\Hello.DB\obj\Debug\net8.0\Hello.DB.AssemblyInfo.cs
+C:\Tasks\Sample webapi\Hello.DB\obj\Debug\net8.0\Hello.DB.csproj.CoreCompileInputs.cache
+C:\Tasks\Sample webapi\Hello.DB\obj\Debug\net8.0\Hello.DB.dll
+C:\Tasks\Sample webapi\Hello.DB\obj\Debug\net8.0\refint\Hello.DB.dll
+C:\Tasks\Sample webapi\Hello.DB\obj\Debug\net8.0\Hello.DB.pdb
+C:\Tasks\Sample webapi\Hello.DB\obj\Debug\net8.0\ref\Hello.DB.dll
+C:\Tasks\Sample webapi\Hello.DB\bin\Debug\net8.0\Hello.DB.runtimeconfig.json
+C:\Tasks\Sample webapi\Hello.DB\obj\Debug\net8.0\Hello.DB.genruntimeconfig.cache
+C:\Tasks\Sample webapi\Hello.DB\obj\Debug\net8.0\Hello.DB.csproj.AssemblyReference.cache

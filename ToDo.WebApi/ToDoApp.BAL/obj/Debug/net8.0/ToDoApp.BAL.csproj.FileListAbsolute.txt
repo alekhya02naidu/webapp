@@ -1,0 +1,17 @@
+C:\Tasks\ToDo.WebApi\ToDoApp.BAL\bin\Debug\net8.0\ToDoApp.BAL.deps.json
+C:\Tasks\ToDo.WebApi\ToDoApp.BAL\bin\Debug\net8.0\ToDoApp.BAL.dll
+C:\Tasks\ToDo.WebApi\ToDoApp.BAL\bin\Debug\net8.0\ToDoApp.BAL.pdb
+C:\Tasks\ToDo.WebApi\ToDoApp.BAL\bin\Debug\net8.0\ToDoApp.DAL.dll
+C:\Tasks\ToDo.WebApi\ToDoApp.BAL\bin\Debug\net8.0\ToDoApp.DB.dll
+C:\Tasks\ToDo.WebApi\ToDoApp.BAL\bin\Debug\net8.0\ToDoApp.DAL.pdb
+C:\Tasks\ToDo.WebApi\ToDoApp.BAL\bin\Debug\net8.0\ToDoApp.DB.pdb
+C:\Tasks\ToDo.WebApi\ToDoApp.BAL\obj\Debug\net8.0\ToDoApp.BAL.csproj.AssemblyReference.cache
+C:\Tasks\ToDo.WebApi\ToDoApp.BAL\obj\Debug\net8.0\ToDoApp.BAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Tasks\ToDo.WebApi\ToDoApp.BAL\obj\Debug\net8.0\ToDoApp.BAL.AssemblyInfoInputs.cache
+C:\Tasks\ToDo.WebApi\ToDoApp.BAL\obj\Debug\net8.0\ToDoApp.BAL.AssemblyInfo.cs
+C:\Tasks\ToDo.WebApi\ToDoApp.BAL\obj\Debug\net8.0\ToDoApp.BAL.csproj.CoreCompileInputs.cache
+C:\Tasks\ToDo.WebApi\ToDoApp.BAL\obj\Debug\net8.0\ToDoApp..D1AD6696.Up2Date
+C:\Tasks\ToDo.WebApi\ToDoApp.BAL\obj\Debug\net8.0\ToDoApp.BAL.dll
+C:\Tasks\ToDo.WebApi\ToDoApp.BAL\obj\Debug\net8.0\refint\ToDoApp.BAL.dll
+C:\Tasks\ToDo.WebApi\ToDoApp.BAL\obj\Debug\net8.0\ToDoApp.BAL.pdb
+C:\Tasks\ToDo.WebApi\ToDoApp.BAL\obj\Debug\net8.0\ref\ToDoApp.BAL.dll

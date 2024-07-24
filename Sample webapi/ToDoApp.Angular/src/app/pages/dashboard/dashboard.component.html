@@ -1,0 +1,71 @@
+<div class="navigated-section"> 
+    <app-header [headerTitle]="'Dashboard'" (addTask)="onAddTask()"></app-header>
+    
+    <app-add-task class="blur-overlay" *ngIf="showAddTask" (closeAddTask)="closeAddTask()"></app-add-task>
+    <!-- mobile view dropdown -->
+    <app-dropdown [navOptions]="navOptions" [currentPage]="'Dashboard'"></app-dropdown>
+
+    <div class="dashboard-detail">
+        <div class="greeting">
+            <div class="greeting-msg">
+                <h2>Hello, Amazing {{ username }}!</h2>
+                <small>What do you want to do today?</small>
+            </div>
+            <img src="assets/images/working-woman.png" alt="image of a working woman" />
+        </div>
+
+        <!-- mobile-view  -->
+        <div class="task-status-mobile-view">
+            <div class="completed">
+                <img src="assets/icons/complete-task.svg" alt="icon of completed task" />
+                <div class="status">
+                    <span>{{ completedPercentage }}%</span>
+                    <small>Completed tasks</small>
+                </div>
+            </div>
+            <div class="active">
+                <img src="assets/icons/time.svg" alt="icon of active task" />
+                <div class="status">
+                    <span>{{ activePercentage }}%</span>
+                    <small>Active tasks</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="tasks-content">
+            <div class="date-heading">
+                <h2>Today’s Tasks</h2>
+                <div class="delete-opt">
+                    <h5 (click)="deleteAllTasks()">Delete All</h5>
+                    <h4>{{ currentDate }}</h4>
+                </div>
+            </div>
+            <div class="tasks-info">
+                <div class="task-list">
+                    <app-task 
+                        *ngFor="let task of todayTasks" 
+                        [task]="task" 
+                        (taskClicked)="onTaskClicked($event)">
+                    </app-task>
+                </div>
+                <div class="task-status">
+                    <div class="completed">
+                        <img src="assets/icons/complete-task.svg" alt="icon of completed task" />
+                        <div class="status">
+                            <span>{{ completedPercentage }}%</span>
+                            <small>Completed tasks</small>
+                        </div>
+                    </div>
+                    <div class="active">
+                        <img src="assets/icons/time.svg" alt="icon of active task" />
+                        <div class="status">
+                            <span>{{ activePercentage }}%</span>
+                            <small>Active tasks</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

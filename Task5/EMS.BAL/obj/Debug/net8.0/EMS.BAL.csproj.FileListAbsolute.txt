@@ -1,0 +1,17 @@
+C:\Tasks\Task5\EMS.BAL\bin\Debug\net8.0\EMS.BAL.deps.json
+C:\Tasks\Task5\EMS.BAL\bin\Debug\net8.0\EMS.BAL.dll
+C:\Tasks\Task5\EMS.BAL\bin\Debug\net8.0\EMS.BAL.pdb
+C:\Tasks\Task5\EMS.BAL\bin\Debug\net8.0\EMS.Common.dll
+C:\Tasks\Task5\EMS.BAL\bin\Debug\net8.0\EMS.DAL.dll
+C:\Tasks\Task5\EMS.BAL\bin\Debug\net8.0\EMS.DAL.pdb
+C:\Tasks\Task5\EMS.BAL\bin\Debug\net8.0\EMS.Common.pdb
+C:\Tasks\Task5\EMS.BAL\obj\Debug\net8.0\EMS.BAL.csproj.AssemblyReference.cache
+C:\Tasks\Task5\EMS.BAL\obj\Debug\net8.0\EMS.BAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Tasks\Task5\EMS.BAL\obj\Debug\net8.0\EMS.BAL.AssemblyInfoInputs.cache
+C:\Tasks\Task5\EMS.BAL\obj\Debug\net8.0\EMS.BAL.AssemblyInfo.cs
+C:\Tasks\Task5\EMS.BAL\obj\Debug\net8.0\EMS.BAL.csproj.CoreCompileInputs.cache
+C:\Tasks\Task5\EMS.BAL\obj\Debug\net8.0\EMS.BAL.csproj.Up2Date
+C:\Tasks\Task5\EMS.BAL\obj\Debug\net8.0\EMS.BAL.dll
+C:\Tasks\Task5\EMS.BAL\obj\Debug\net8.0\refint\EMS.BAL.dll
+C:\Tasks\Task5\EMS.BAL\obj\Debug\net8.0\EMS.BAL.pdb
+C:\Tasks\Task5\EMS.BAL\obj\Debug\net8.0\ref\EMS.BAL.dll

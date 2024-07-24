@@ -1,0 +1,49 @@
+<div class="task-detail-card" [style.background]="getBackgroundColor()" [ngClass]="{ 'blurred': isEditMode }">
+    <div class="task-detail">
+        <div class="task-title">
+            <h2>{{ task.title }}</h2>
+            <small>Added {{ getFormattedTimeDifference(task.createdAt) }}</small>
+            <small *ngIf="task.updatedAt !== task.createdAt">Updated {{ getFormattedTimeDifference(task.updatedAt) }}</small>
+    
+        </div>
+        <div class="task-description">
+            <h3>Description</h3>
+            <span>{{ task.description }}</span>
+        </div>
+    </div>
+    <div class="task-btns">
+        <div class="completed-check">
+            <span>Completed</span>
+            <input type="checkbox" (change)="onCompletionCheckboxChange($event)">
+        </div>
+        <div class="edit-delete">
+            <img class="edit" src="assets/icons/edit.svg" alt="edit icon"  (click)="openEditTask()"/>
+            <img class="delete" src="assets/icons/delete.svg" alt="icon of delete option" (click)="showDeleteConfirmation()" />
+        </div>
+    </div>
+
+    <!-- edit the existing task -->
+    <app-add-task class="blur-overlay" 
+                    *ngIf="isEditMode" 
+                    [task]="task" 
+                    (closeAddTask)="onCloseEdit()" 
+                    (taskAdded)="onTaskUpdated($event)">
+    </app-add-task>
+
+    <!-- complete confirmation -->
+    <app-confirmation *ngIf="showCompletionConfirmation"
+                       [message]="'Are you sure you want to mark this task as Completed?'"
+                       (confirm)="markTaskAsCompleted()"
+                       (cancel)="cancelCompletion()">
+    </app-confirmation>
+
+    <!-- delete confirmation -->
+    <app-confirmation *ngIf="showDeletionConfirmation"
+                    [message]="'Are you sure you want to delete this task?'"
+                    (confirm)="deleteConfirmedTask()"
+                    (cancel)="cancelDeletion()">
+    </app-confirmation>
+</div>
+
+
+

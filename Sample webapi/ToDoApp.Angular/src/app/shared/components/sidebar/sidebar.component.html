@@ -1,0 +1,18 @@
+<div class="sidebar">
+    <h2>To-Do App</h2>
+    <div class="option-btn">
+        <button (click)="addTaskClicked()">
+            <span>Add Task</span>
+            <small>+</small>
+        </button>
+        <div class="nav-options">
+            <span *ngFor="let option of navOptions; let i = index" 
+                (click)="onNavOptionSelected(i)"
+                [ngClass]="{'selected': navOptionSelected[i]}">
+                {{ option }}
+            </span>
+        </div>
+    </div>
+</div>
+
+
